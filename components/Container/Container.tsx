@@ -103,7 +103,7 @@ export default function Container({
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-3xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
+          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
             <Link href='/'>
               <a className='relative h-10 w-10'>
                 <Image
@@ -153,7 +153,7 @@ export default function Container({
             <main
               className={cn(
                 'px-4 mt-20',
-                'max-w-3xl',
+                'max-w-4xl',
                 'mx-auto my-auto',
                 'flex flex-col justify-center gap-12',
                 // 'divide-y divide-gray-300 dark:divide-gray-700',

@@ -2,21 +2,14 @@ import { pick } from 'contentlayer/client'
 import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
 
-import Container from '@components/Container'
 import { cn } from '@lib/classNames'
 import type { Writing } from 'contentlayer/generated'
 
 import { allWritings } from '.contentlayer/generated'
 
-const WritingPage = ({ posts }: { posts: Writing[] }) => {
+const BlogPostList = ({ posts }: { posts: Writing[] }) => {
   return (
-    <Container
-      back={{
-        href: '/',
-        label: 'Index',
-      }}
-    >
-      <h1 className='font-semibold text-xl'>Writing</h1>
+    <div>
       {posts?.slice(0, 5).map((post, index) => (
         <Link key={post.slug} href={`/writing/${post.slug}`}>
           <a
@@ -38,11 +31,11 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
           </a>
         </Link>
       ))}
-    </Container>
+    </div>
   )
 }
 
-export default WritingPage
+export default BlogPostList
 
 export function getStaticProps() {
   const posts = allWritings

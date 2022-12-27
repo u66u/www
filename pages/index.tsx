@@ -5,8 +5,14 @@ import type { NextPage } from 'next'
 import Container from '@components/Container'
 import { MemoizedEndeavors } from '@components/Endeavors'
 import { endeavorsList } from '@data/endeavors/endeavorsItems'
+import BlogPostList from '@components/BlogPostList'
+import type { Writing } from 'contentlayer/generated'
+import { allWritings } from '.contentlayer/generated'
+import { pick } from 'contentlayer/client'
 
-const Home: NextPage = () => {
+
+
+const Home = ({ posts }: { posts: Writing[] }) => {
   return (
     <Suspense fallback={null}>
       <Container page={'index'}>
@@ -41,17 +47,35 @@ const Home: NextPage = () => {
           <div className='flex flex-col gap-4'>
             <h3 className='font-semibold text-lg'>Recent endeavors</h3>
             <Suspense fallback={null}>
-              <div className='flex gap-6 overflow-x-scroll w-[100vw] relative left-1/2 right-1/2 -mx-[50vw] px-4 snap-x snap-mandatory masked-overflow'>
-                {endeavorsList.map((item, key) => (
-                  <MemoizedEndeavors key={key} endeavor={item} />
-                ))}
-              </div>
+              
+             
+      
+      <BlogPostList posts={posts} />
+            
             </Suspense>
           </div>
         </header>
       </Container>
     </Suspense>
+     
+
   )
 }
 
 export default Home
+
+export function getStaticProps() {
+  const posts = allWritings
+    .map(post => pick(post, ['slug', 'title', 'summary', 'publishedAt']))
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+

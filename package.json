@@ -24,6 +24,7 @@
     "contentlayer": "^0.2.8",
     "date-fns": "^2.29.2",
     "framer-motion": "^7.3.2",
+    "front-matter": "^4.0.2",
     "match-sorter": "6.3.1",
     "next": "12.3.0",
     "next-contentlayer": "^0.2.8",
