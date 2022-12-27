@@ -1,16 +1,15 @@
 import { Suspense } from 'react'
 
+import { pick } from 'contentlayer/client'
 import type { NextPage } from 'next'
 
+import BlogPostList from '@components/BlogPostList'
 import Container from '@components/Container'
 import { MemoizedEndeavors } from '@components/Endeavors'
 import { endeavorsList } from '@data/endeavors/endeavorsItems'
-import BlogPostList from '@components/BlogPostList'
 import type { Writing } from 'contentlayer/generated'
+
 import { allWritings } from '.contentlayer/generated'
-import { pick } from 'contentlayer/client'
-
-
 
 const Home = ({ posts }: { posts: Writing[] }) => {
   return (
@@ -47,18 +46,12 @@ const Home = ({ posts }: { posts: Writing[] }) => {
           <div className='flex flex-col gap-4'>
             <h3 className='font-semibold text-lg'>Recent endeavors</h3>
             <Suspense fallback={null}>
-              
-             
-      
-      <BlogPostList posts={posts} />
-            
+              <BlogPostList posts={posts} />
             </Suspense>
           </div>
         </header>
       </Container>
     </Suspense>
-     
-
   )
 }
 
@@ -78,4 +71,3 @@ export function getStaticProps() {
     },
   }
 }
-

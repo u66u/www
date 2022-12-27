@@ -20,6 +20,7 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-react: ^7.31.8
   framer-motion: ^7.3.2
+  front-matter: ^4.0.2
   globby: ^13.1.2
   husky: 8.0.1
   match-sorter: 6.3.1
@@ -51,6 +52,7 @@ dependencies:
   contentlayer: 0.2.8
   date-fns: 2.29.2
   framer-motion: 7.3.2_biqbaboplfbrettd7655fr4n2y
+  front-matter: 4.0.2
   match-sorter: 6.3.1
   next: 12.3.0_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.2.8_c3hne4hwj64hb7tofigd3bvkji
@@ -2628,6 +2630,12 @@ packages:
     resolution: {integrity: sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /front-matter/4.0.2:
+    resolution: {integrity: sha512-I8ZuJ/qG92NWX8i5x1Y8qyj3vizhXS31OxjKDu3LKP+7/qBgfIKValiZIEwoVoJKUHlhWtYrktkxV1XsX+pPlg==}
+    dependencies:
+      js-yaml: 3.14.1
     dev: false
 
   /fs-constants/1.0.0:
