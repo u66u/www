@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cretu.dev/BlogPostList</loc>
-  </url>
-
-  <url>
     <loc>https://cretu.dev</loc>
   </url>
 
   <url>
-    <loc>https://cretu.dev/tools</loc>
+    <loc>https://cretu.dev/projects</loc>
   </url>
 
   <url>
@@ -18,6 +14,14 @@
 
   <url>
     <loc>https://cretu.dev/writing/2021</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/writing/button copy 2</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/writing/button copy</loc>
   </url>
 
   <url>

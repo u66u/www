@@ -7,4 +7,8 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = withContentlayer({ nextConfig })
+module.exports = {
+  eslint: {
+        ignoreDuringBuilds: true,
+  },
+}
