@@ -20,7 +20,7 @@
     "@radix-ui/react-tooltip": "^1.0.0",
     "@splitbee/web": "^0.3.0",
     "cmdk": "^0.1.21",
-    "contentlayer": "^0.2.8",
+    "contentlayer": "^0.2.9",
     "date-fns": "^2.29.2",
     "framer-motion": "^7.3.2",
     "front-matter": "^4.0.2",
