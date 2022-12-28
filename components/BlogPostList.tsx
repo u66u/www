@@ -3,9 +3,9 @@ import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
 
 import { cn } from '@lib/classNames'
-import type { Writing } from '.contentlayer/generated'
+import type { Writing } from 'contentlayer/generated'
 
-import { allWritings } from '.contentlayer/generated'
+import { allWritings } from 'contentlayer/generated'
 
 
 const images = [
