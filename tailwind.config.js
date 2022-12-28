@@ -21,6 +21,9 @@ module.exports = {
       spacing: {
         128: '32rem',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+      },
       colors: {
         white: '#fff',
         green: colors.emerald,

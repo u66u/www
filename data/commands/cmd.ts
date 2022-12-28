@@ -23,9 +23,9 @@ export const Navigation: Action[] = [
     section: 'Navigation',
   },
   {
-    name: 'Tools',
-    keywords: 'tools',
-    href: '/tools',
+    name: 'Projects',
+    keywords: 'projects',
+    href: '/projects',
     section: 'Navigation',
   },
 ]

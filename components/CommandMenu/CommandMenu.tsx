@@ -261,7 +261,7 @@ export default function CommandMenu({
           leave='duration-100 ease-in'
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
-          className='max-w-2xl mx-auto'
+          className='max-w-4xl mx-auto'
         >
           <div
             className={cn(
@@ -272,25 +272,7 @@ export default function CommandMenu({
               'flex flex-col'
             )}
           >
-            <Dialog.Title
-              className={cn('border-b border-black/10 dark:border-gray-700/50')}
-            >
-              <input
-                autoComplete='off'
-                className={cn(
-                  'w-full',
-                  'p-4',
-                  'bg-transparent',
-                  'focus:ring-0 outline-none'
-                )}
-                placeholder={placeholder as string}
-                aria-label='Search for links or commands'
-                value={input}
-                onChange={handleChange}
-                type='text'
-                spellCheck={false}
-              />
-            </Dialog.Title>
+           
             <Dialog.Description as='div'>
               {!searchResults.length && (
                 <p className='text-secondary p-2'>No results found.</p>
@@ -301,7 +283,7 @@ export default function CommandMenu({
                   className={cn(
                     'relative',
                     'mt-3 mb-3.5 mx-3',
-                    'overflow-auto max-h-[32vh]',
+                    'overflow-auto max-h-auto',
                     'text-tertiary'
                   )}
                 >

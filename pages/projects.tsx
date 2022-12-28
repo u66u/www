@@ -6,7 +6,7 @@ const Tools = () => {
   return (
     <Container footer={false}>
       <div className='flex flex-col gap-6'>
-        <h1 className='font-semibold text-xl'>Tools</h1>
+        <h1 className='font-semibold text-xl'>Projects</h1>
         <div className='flex flex-col gap-2 text-secondary'>
           <p>
             Those are the apps that I use almost daily, and that help me deliver

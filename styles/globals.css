@@ -140,6 +140,19 @@
     background-size: 16px 16px;
   }
 
+  .button-full-width {
+    width: 100%;
+  }
+  
+  .button-center {
+    text-align: center;
+    align-content: center;
+  }
+  
+  .button-border {
+    border: 1px solid black;
+  }
+
   .light .masked-overflow {
     --mask-height: 32px;
     overflow-x: auto;
