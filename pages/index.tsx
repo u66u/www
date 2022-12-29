@@ -1,12 +1,7 @@
 import { Suspense } from 'react'
-
 import { pick } from 'contentlayer/client'
-import type { NextPage } from 'next'
-
 import BlogPostList from '@components/BlogPostList'
 import Container from '@components/Container'
-import { MemoizedEndeavors } from '@components/Endeavors'
-import { endeavorsList } from '@data/endeavors/endeavorsItems'
 import type { Writing } from 'contentlayer/generated'
 import LatestProjects from '@components/LatestProjects'
 import { allWritings } from '.contentlayer/generated'
