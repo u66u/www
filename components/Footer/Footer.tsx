@@ -49,40 +49,19 @@ export default function Footer({ page }: IFooterProps): JSX.Element {
     <Suspense fallback={null}>
       <footer
         className={`flex flex-col gap-9 mb-8 text-tertiary sm:px-0  ${
-          page === 'index' ? 'max-w-lg' : page === 'writing' ? '' : ''
+          page === 'index' ? 'max-w-full' : page === 'writing' ? '' : ''
         }`}
       >
         <div className='flex flex-col'>
-          <div className='border border-gray-300 border-dashed dark:border-gray-700'></div>
-          <div className='flex justify-between py-4'>
-            <span>~ Prioritize yourself.</span>
-            <span className='w-16'>{store ? store : '--------'}</span>
-          </div>
+          <div className='border border-gray-300 border-solid dark:border-gray-700'></div>
+         
         </div>
         {page === 'index' && (
           <span className='text-sm'>
-            © Cristian Crețu 2022. Website built using Next.js & TailwindCSS (
-            <a
-              href='https://github.com/cristicretu/cretu.dev'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary'
-            >
-              view source
-            </a>
-            ), deployed and hosted by{' '}
-            <a
-              href='https://vercel.com'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary'
-            >
-              Vercel
-            </a>
-            .
+            SEKLETSOV.XYZ
           </span>
         )}
-        <div className='flex flex-row items-center space-x-4'>
+        <div className='flex flex-row items-center space-x-4 '>
           <a
             href='https://twitter.com/cristicrtu'
             className='visible'

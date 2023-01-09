@@ -153,6 +153,51 @@
     border: 1px solid black;
   }
 
+  .gradienta {
+    background: linear-gradient(
+        114.95deg,
+        rgba(235, 0, 255, 0.5) 0%,
+        rgba(0, 71, 255, 0) 34.35%
+      ),
+      linear-gradient(180deg, #004b5b 0%, #ffa7a7 100%),
+      linear-gradient(244.35deg, #ffb26a 0%, #3676b1 50.58%, #00a3ff 100%),
+      linear-gradient(244.35deg, #ffffff 0%, #004a74 49.48%, #ff0000 100%),
+      radial-gradient(100% 233.99% at 0% 100%, #b70000 0%, #ad00ff 100%),
+      linear-gradient(307.27deg, #219d87 0.37%, #2650ba 50.19%, #2800c6 100%),
+      radial-gradient(
+        100% 140% at 100% 0%,
+        #ff00c7 0%,
+        #006c7a 49.48%,
+        #760000 100%
+      );
+    background-blend-mode: hard-light, overlay, overlay, overlay, difference,
+      difference, normal;
+  } 
+
+  .myblur {
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  } 
+
+  .wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+
   .light .masked-overflow {
     --mask-height: 32px;
     overflow-x: auto;

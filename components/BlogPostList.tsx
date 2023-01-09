@@ -25,9 +25,10 @@ const BlogPostList = ({ posts }: { posts: Writing[] }) => {
         <Link key={post.slug} href={`/writing/${post.slug}`}>
           <a
             className={cn(
-              'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
+              'flex flex-row justify-between py-2.5 px-2 -mx-2 rounded-md border-gray-200 dark:border-gray-800',
               'hover:bg-gray-200 dark:hover:bg-gray-800',
               'transition-all duration-200'
+              
             )}
           >
            <img
@@ -36,7 +37,7 @@ const BlogPostList = ({ posts }: { posts: Writing[] }) => {
               className='text-quaternary w-6 h-6 object-cover object-center rounded-full '
             />
             <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
-            <span className='text-tertiary flex-shrink-0'>
+            <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
               {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
             </span>
           </a>
@@ -44,19 +45,11 @@ const BlogPostList = ({ posts }: { posts: Writing[] }) => {
       ))}
       <br></br>
       <Link href='/writing'>
-      <button
-        className={cn(
-          ' flex-row justify-between py-2 px-2 -mx-2 rounded-md',
-          'hover:bg-gray-200 dark:hover:bg-gray-800',
-          'transition-all duration-200',
-          'button-full-width', /* Apply the full-width class */
-          'button-text-center', /* Apply the text-center class */
-          'border-solid border-2 border-slate-500 border-opacity-60'
-          
-        )}
-      >
-        View More
-      </button>
+      <button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+  <span className="w-full relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+View more
+  </span>
+</button>
       </Link>
     </div>
   )

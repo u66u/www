@@ -28,11 +28,35 @@ export default function CommandMenu({
 }: {
   opened: boolean
   setOpened: (opened: boolean) => void
-}) {
+}) { 
   const [isOpen, setIsOpen] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
   const router = useRouter()
 
+  useEffect(() => {
+    // get the preferred theme from local storage
+    const preferredTheme = localStorage.getItem('theme')
+    // if a preferred theme is set, use it
+    if (preferredTheme) {
+      setTheme(preferredTheme)
+    } else {
+      // otherwise, set the theme to dark by default
+      setTheme('dark')
+    }
+  }, [])  // add an empty dependency array to ensure the effect only runs once
+
+  // add a function to toggle the theme
+  const toggleTheme = () => {
+    if (resolvedTheme === 'light') {
+      setTheme('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      setTheme('light')
+      localStorage.setItem('theme', 'light')
+    }
+  }
+
+  
   const [results] = useState(Navigation.concat(Socials).concat(Themes))
   const [input, setInput] = useState('')
 
@@ -394,11 +418,13 @@ export default function CommandMenu({
                           )}
                           <span>{result.name}</span>
                         </li>
+                        
                       )
                     }
                   })}
                 </ul>
               )}
+            
             </Dialog.Description>
           </div>
         </Transition.Child>

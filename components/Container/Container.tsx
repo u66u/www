@@ -40,9 +40,9 @@ export default function Container({
   writingNav = '',
   showNav = true,
   children,
-  title = 'Cristian Crețu - Developer & Designer.',
-  description = 'Full-stack developer and digital artist.',
-  image = 'https://cretu.dev/static/images/og.png',
+  title = 'Max Sekletsov',
+  description = ' ',
+  image = '/static/images/og.png',
   date,
   page,
   ...props
@@ -79,7 +79,7 @@ export default function Container({
           <meta property='og:url' content={`${baseUrl}${router.asPath}`} />
           <link rel='canonical' href={`${baseUrl}${router.asPath}`} />
           <meta property='og:type' content={meta.type} />
-          <meta property='og:site_name' content='Cristian Crețu' />
+          <meta property='og:site_name' content='Max Sekletsov' />
           <meta property='og:description' content={meta.description} />
           <meta property='og:title' content={meta.title} />
           <meta property='og:image' content={meta.image} />

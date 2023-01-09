@@ -31,22 +31,7 @@ export const Navigation: Action[] = [
 ]
 
 export const Socials: Action[] = [
-  {
-    name: 'GitHub',
-    keywords: 'github',
-    perform: () => {
-      window.open('https://github.com/cristicretu')
-    },
-    section: 'Socials',
-  },
-  {
-    name: 'Twitter',
-    keywords: 'twitter',
-    perform: () => {
-      window.open('https://twitter.com/cristicrtu')
-    },
-    section: 'Socials',
-  },
+  
 ]
 
 export const Themes: Action[] = [
@@ -60,9 +45,5 @@ export const Themes: Action[] = [
     keywords: 'dark',
     section: 'Themes',
   },
-  {
-    name: 'Change theme to system',
-    keywords: 'system',
-    section: 'Themes',
-  },
+ 
 ]

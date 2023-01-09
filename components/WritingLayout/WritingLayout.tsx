@@ -19,9 +19,9 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
   return (
     <Container
       writingNav={post.slug}
-      title={`${post.title} - Cristian Crețu`}
+      title={`${post.title} - Max Sekletsov`}
       description={post.summary}
-      image={`https://cretu.dev/${post.image}`}
+      image={`https://sekletsov.xyz/${post.image}`}
       date={new Date(post.publishedAt).toISOString()}
       type='article'
       back={{
@@ -36,7 +36,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
         </h1>
         <div className='flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center'>
           <div className='text-sm flex flex-row gap-2 divide-x divide-gray-300 dark:divide-gray-700 items-center text-secondary'>
-            <p>Cristian Crețu</p>
+            <p>Max Sekletsov</p>
             <p className='pl-2'>
               {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
             </p>
@@ -60,11 +60,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
           <div className='w-full my-4 prose dark:prose-dark max-w-2xl'>
             {children}
           </div>
-          <div className='button-primary-x'>
-            <ExternalLink arrow={true} href={editUrl(post.slug)}>
-              Edit source on GitHub
-            </ExternalLink>
-          </div>
+          
         </Suspense>
       </article>
     </Container>

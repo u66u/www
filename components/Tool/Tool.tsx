@@ -26,7 +26,7 @@ export default function Tool({
       rel='noopener noreferrer'
     >
       <div className='relative h-6 w-6'>{svg}</div>
-      <div className='flex flex-col border-b  border-gray-200 dark:border-gray-800  w-full py-6 -my-2'>
+      <div className='flex flex-col border-t border-gray-200 dark:border-gray-800  w-full py-6 -my-2'>
         <h2 className='text-secondary font-semibold '>{name}</h2>
         {description && <p className='text-tertiary text-sm'>{description}</p>}
       </div>

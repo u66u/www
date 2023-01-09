@@ -41,7 +41,7 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
               className='text-quaternary w-6 h-6 object-cover object-center rounded-full ml-2'
             />
             <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
-            <span className='text-tertiary flex-shrink-0'>
+            <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
               {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
             </span>
           </a>

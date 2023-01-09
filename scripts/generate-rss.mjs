@@ -6,9 +6,9 @@ import { allWritings } from '../.contentlayer/generated/index.mjs'
 
 async function generate() {
   const feed = new RSS({
-    title: 'Cristian Crețu',
-    site_url: 'https://cretu.dev',
-    feed_url: `https://cretu.dev/feed.xml`,
+    title: 'Max Sekletsov',
+    site_url: 'https://sekletsov.xyz',
+    feed_url: `https://sekletsov.xyz/feed.xml`,
   })
 
   allWritings.map(post => {
