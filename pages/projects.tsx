@@ -1,23 +1,18 @@
 import Container from '@components/Container'
+import ProjectsLayout from '@components/ProjectsLayout'
 import Tool from '@components/Tool/Tool'
 import { ToolBox } from '@data/tools/ToolBox'
-import ProjectsLayout from '@components/ProjectsLayout'
 
 const Tools = () => {
-  
   return (
     <Container footer={true}>
       <div className='flex flex-col gap-6'>
-       
         <div className='flex flex-col gap-2 text-secondary'>
-          <p>
-            A congruence of theory and practice
-          </p>
-          
+          <p>A congruence of theory and practice</p>
         </div>
 
         <div>
-        <ProjectsLayout />
+          <ProjectsLayout />
         </div>
       </div>
     </Container>
@@ -26,9 +21,7 @@ const Tools = () => {
 
 export default Tools
 
-
-
-// Sort by name 
+// Sort by name
 // const Tools = () => {
 //   return (
 //     <Container footer={false}>

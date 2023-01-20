@@ -60,7 +60,6 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
           <div className='w-full my-4 prose dark:prose-dark max-w-2xl'>
             {children}
           </div>
-          
         </Suspense>
       </article>
     </Container>
