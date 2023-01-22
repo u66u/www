@@ -23,6 +23,7 @@ interface IContainerProps {
   footer?: boolean
   showNav?: boolean
   writingNav?: string
+  snippetNav?: string
   children?: React.ReactNode
   title?: string
   description?: string
@@ -38,6 +39,7 @@ export default function Container({
   footer = true,
   back,
   writingNav = '',
+  snippetNav = '',
   showNav = true,
   children,
   title = 'Max Sekletsov',
@@ -65,7 +67,13 @@ export default function Container({
       <CommandMenu opened={isOpen} setOpened={setIsOpen} />
       <div
         className={cn(
-          writingNav ? 'bg-dots' : '',
+          writingNav
+            ? 'bg-gradient-to-r from-yellow-300/25 via-pink-300/25 to-pink-500/25'
+            : '',
+          snippetNav
+            ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
+            : '',
+
           'text-primary',
           'relative h-full min-h-screen w-full',
           'flex flex-col',
@@ -115,6 +123,27 @@ export default function Container({
                 />
               </a>
             </Link>
+            {snippetNav && (
+              <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
+                <Link href='/'>
+                  <a className='hover:text-primary transition-all cursor-pointer'>
+                    index
+                  </a>
+                </Link>
+                <span>/</span>
+                <Link href='/snippet'>
+                  <a className='hover:text-primary transition-all cursor-pointer'>
+                    snippets
+                  </a>
+                </Link>
+                <span>/</span>
+                <Link href={`/snippet/${snippetNav}`}>
+                  <a className='hover:text-primary transition-all cursor-pointer'>
+                    {snippetNav}
+                  </a>
+                </Link>
+              </div>
+            )}
             {writingNav && (
               <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
                 <Link href='/'>
@@ -156,10 +185,13 @@ export default function Container({
                 'max-w-4xl',
                 'mx-auto my-auto',
                 'flex flex-col justify-center gap-12',
+                snippetNav
+                  ? 'shadow-2xl dark:shadow-gray-800/90 dark:bg-black dark:bg-opacity-70 pt-6 bg-primary max-w-5xl'
+                  : '',
                 // 'divide-y divide-gray-300 dark:divide-gray-700',
                 'rounded-lg',
                 writingNav
-                  ? 'shadow-2xl dark:shadow-gray-800/90 pt-6 bg-primary'
+                  ? 'shadow-2xl dark:shadow-gray-800/90 dark:bg-black dark:bg-opacity-70 pt-6 bg-primary max-w-5xl'
                   : ''
               )}
             >

@@ -41,11 +41,11 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                     and{' '}
                     <a
                       className='focusable rounded-sm font-medium text-zinc-800 underline decoration-violet-500 decoration-2 underline-offset-2 transition duration-100 hover:text-violet-500 hover:decoration-violet-500/30 focus:text-violet-500 focus:ring-violet-500/40 dark:text-white dark:decoration-violet-400 dark:hover:text-violet-400 dark:hover:decoration-violet-400/30 dark:focus:text-violet-400 dark:focus:ring-violet-400/40'
-                      href='https://www.fabrilab.net/'
+                      href='https://www.venera.bio/'
                       rel='noreferrer'
                       target='_blank'
                     >
-                      Caelestis Labs -{'>'}
+                      Venera Bio -{'>'}
                     </a>
                   </p>
                   <br />{' '}

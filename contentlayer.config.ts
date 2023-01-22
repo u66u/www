@@ -54,13 +54,25 @@ const Writing = defineDocumentType(() => ({
     publishedAt: { type: 'string', required: true },
     summary: { type: 'string', required: true },
     image: { type: 'string', required: true },
+    category: { type: 'string', required: true },
+  },
+  computedFields,
+}))
+const Snippet = defineDocumentType(() => ({
+  name: 'Snippet',
+  filePathPattern: 'snippet/*.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    publishedAt: { type: 'string', required: true },
+    category: { type: 'string', required: true },
   },
   computedFields,
 }))
 
 const contentLayerConfig = makeSource({
   contentDirPath: 'data',
-  documentTypes: [Writing],
+  documentTypes: [Writing, Snippet],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

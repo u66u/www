@@ -1,7 +1,5 @@
 import Container from '@components/Container'
 import ProjectsLayout from '@components/ProjectsLayout'
-import Tool from '@components/Tool/Tool'
-import { ToolBox } from '@data/tools/ToolBox'
 
 const Tools = () => {
   return (

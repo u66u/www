@@ -349,3 +349,26 @@
     -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
   }
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+}
+.category1-icon {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+}
+
+.category2-icon {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+}
+
+.category3-icon {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+}

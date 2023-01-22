@@ -28,11 +28,15 @@ export const Navigation: Action[] = [
     href: '/projects',
     section: 'Navigation',
   },
+  {
+    name: 'Snippets',
+    keywords: 'snippet',
+    href: '/snippet',
+    section: 'Navigation',
+  },
 ]
 
-export const Socials: Action[] = [
-  
-]
+export const Socials: Action[] = []
 
 export const Themes: Action[] = [
   {
@@ -45,5 +49,4 @@ export const Themes: Action[] = [
     keywords: 'dark',
     section: 'Themes',
   },
- 
 ]

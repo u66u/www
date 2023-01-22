@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { pick } from 'contentlayer/client'
 import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
@@ -18,6 +20,17 @@ const images = [
 ]
 
 const WritingPage = ({ posts }: { posts: Writing[] }) => {
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+
+  // Get all unique categories
+  const categories = Array.from(new Set(posts.map(post => post.category)))
+
+  // Filter the posts based on the selected categories
+  const filteredPosts = posts.filter(post => {
+    if (selectedCategories.length === 0) return true
+    return selectedCategories.some(category => post.category === category)
+  })
+
   return (
     <Container
       back={{
@@ -26,7 +39,35 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
       }}
     >
       <h1 className='font-semibold text-xl'>Writing</h1>
-      {posts?.map((post, index) => (
+      <div className='mb-4'>
+        {categories.map(category => (
+          <button
+            key={category}
+            className={cn(
+              'text-white py-1.5 px-3 rounded-md mr-2',
+              'focus:outline-none focus:shadow-outline',
+              selectedCategories.includes(category)
+                ? 'bg-slate-200 text-blue-500 dark:bg-gray-600  dark:text-green-300'
+                : 'bg-slate-200 dark:bg-gray-800 dark:text-white text-gray-800'
+            )}
+            onClick={() => {
+              if (selectedCategories.includes(category)) {
+                setSelectedCategories(
+                  selectedCategories.filter(c => c !== category)
+                )
+              } else {
+                setSelectedCategories([...selectedCategories, category])
+              }
+            }}
+          >
+            {category}{' '}
+            {selectedCategories.includes(category) && (
+              <span className='ml-1'> &#x2715;</span>
+            )}
+          </button>
+        ))}
+      </div>
+      {filteredPosts?.map((post, index) => (
         <Link key={post.slug} href={`/writing/${post.slug}`}>
           <a
             className={cn(
@@ -55,7 +96,9 @@ export default WritingPage
 
 export function getStaticProps() {
   const posts = allWritings
-    .map(post => pick(post, ['slug', 'title', 'summary', 'publishedAt']))
+    .map(post =>
+      pick(post, ['slug', 'title', 'summary', 'category', 'publishedAt'])
+    )
     .sort(
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
