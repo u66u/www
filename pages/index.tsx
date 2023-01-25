@@ -36,7 +36,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                       rel='noreferrer'
                       target='_blank'
                     >
-                      Seleri Agency -{'>'}
+                      Seleri Agency {'-->'}
                     </a>{' '}
                     and{' '}
                     <a
@@ -45,15 +45,15 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                       rel='noreferrer'
                       target='_blank'
                     >
-                      Venera Bio -{'>'}
+                      Venera Bio {'-->'}
                     </a>
                   </p>
                   <br />{' '}
                   <p>
                     I believe that humans should be able to live for 200 years,
-                    that's why I'm learning biology, and experimenting with
-                    different aging mechanisms. In my free time, I like to solve
-                    math problems and code.{' '}
+                    that&apos;s why I&apos;m learning biology, and experimenting
+                    with different aging mechanisms. In my free time, I like to
+                    solve math problems and code.{' '}
                   </p>
                   <br />
                   This website is an outlet for my thoughts, ideas, and

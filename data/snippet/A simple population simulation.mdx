@@ -1,0 +1,70 @@
+---
+title: 'A simple population simulation'
+publishedAt: '2022-02-02'
+category: 'JavaScript'
+---
+
+
+
+```
+let population = 100000
+let year = 0
+let birthRate = 10
+let deathRate = 8
+let migration = 2000
+let lifeExpectancy = 75
+let fertilityRate = 2
+let unemploymentRate = 5
+let educationRate = 30
+let healthcareRate = 80
+let politicalStability = 8
+let environmentalFactors = 7
+
+let updatePopulation = function () {
+  year++
+  let births = Math.round((population * birthRate) / 1000)
+  let deaths = Math.round((population * deathRate) / 1000)
+  let netMigration = migration
+
+  if (unemploymentRate > 7) {
+    netMigration -= Math.round(netMigration * 0.1)
+  }
+
+  if (educationRate > 40) {
+    births -= Math.round(births * 0.1)
+  }
+  births *= fertilityRate
+
+  if (healthcareRate < 70) {
+    deaths += Math.round(deaths * 0.1)
+  }
+  deaths *= lifeExpectancy / 75
+
+  if (politicalStability < 6) {
+    netMigration -= Math.round(netMigration * 0.1)
+  }
+  if (environmentalFactors < 6) {
+    netMigration -= Math.round(netMigration * 0.1)
+  }
+
+  population += births + netMigration - deaths
+  console.log('Year: ' + year + ' Population size: ' + population)
+}
+
+setInterval(updatePopulation, 100)
+
+```
+
+Output:
+
+```
+Year: 1 Population size: 103200
+Year: 2 Population size: 106438
+Year: 3 Population size: 109714
+Year: 4 Population size: 113030
+Year: 5 Population size: 116386
+Year: 6 Population size: 119783
+Year: 7 Population size: 123221
+Year: 8 Population size: 126699
+etc...
+```

@@ -127,13 +127,13 @@ export default function Container({
               <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
                 <Link href='/'>
                   <a className='hover:text-primary transition-all cursor-pointer'>
-                    index
+                    Index
                   </a>
                 </Link>
                 <span>/</span>
                 <Link href='/snippet'>
                   <a className='hover:text-primary transition-all cursor-pointer'>
-                    snippets
+                    Snippets
                   </a>
                 </Link>
                 <span>/</span>
