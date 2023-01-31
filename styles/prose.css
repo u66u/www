@@ -169,7 +169,7 @@ word-break: break-word;
 }
 
 .prose pre {
-  @apply max-w-[86vw] border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
+  @apply border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
 }
 
 .prose img {
@@ -195,6 +195,7 @@ pre {
 .highlight-line {
   @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
 }
+
 
 
 div[data-rehype-pretty-code-fragment] pre {
