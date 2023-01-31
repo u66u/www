@@ -64,7 +64,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
           </div>
 
           <div className='flex flex-col gap-4'>
-            <h3 className='font-semibold text-lg'>Recent posts</h3>
+            <h3 className='font-semibold text-xl'>Recent posts</h3>
             <Suspense fallback={null}>
               <BlogPostList posts={posts} />
               <LatestProjects />

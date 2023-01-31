@@ -139,7 +139,7 @@ export default function Container({
                 <span>/</span>
                 <Link href={`/snippet/${snippetNav}`}>
                   <a className='hover:text-primary transition-all cursor-pointer'>
-                    {snippetNav}
+                    Content
                   </a>
                 </Link>
               </div>

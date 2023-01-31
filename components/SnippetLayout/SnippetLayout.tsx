@@ -1,10 +1,6 @@
 import { Suspense } from 'react'
 
-import { format, parseISO } from 'date-fns'
-import Image from 'next/image'
-
 import Container from '@components/Container'
-import ExternalLink from '@components/ExternalLink'
 import { Snippet } from 'contentlayer/generated'
 
 interface ISnippetLayoutProps {

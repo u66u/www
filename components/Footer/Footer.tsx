@@ -54,13 +54,8 @@ export default function Footer({ page }: IFooterProps): JSX.Element {
       >
         <div className='flex flex-col'>
           <div className='border border-gray-300 border-solid dark:border-gray-700'></div>
-         
         </div>
-        {page === 'index' && (
-          <span className='text-sm'>
-            SEKLETSOV.XYZ
-          </span>
-        )}
+        {page === 'index' && <span className='text-sm'>SEKLETSOV.XYZ</span>}
         <div className='flex flex-row items-center space-x-4 '>
           <a
             href='https://twitter.com/cristicrtu'
