@@ -67,9 +67,7 @@ export default function Container({
       <CommandMenu opened={isOpen} setOpened={setIsOpen} />
       <div
         className={cn(
-          writingNav
-            ? 'bg-gradient-to-r from-yellow-300/25 via-pink-300/25 to-pink-500/25'
-            : '',
+          writingNav ? '' : '',
           snippetNav
             ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
             : '',
@@ -111,7 +109,7 @@ export default function Container({
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
+          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-5xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
             <Link href='/'>
               <a className='relative h-10 w-10'>
                 <Image
@@ -136,11 +134,16 @@ export default function Container({
                     Snippets
                   </a>
                 </Link>
-                <span>/</span>
+                <span className=''>/</span>
                 <Link href={`/snippet/${snippetNav}`}>
-                  <a className='hover:text-primary transition-all cursor-pointer'>
-                    Content
-                  </a>
+                  <div className='flex'>
+                    <a className='hidden md:block hover:text-primary transition-all cursor-pointer'>
+                      {snippetNav}
+                    </a>
+                    <span className='md:hidden truncate-post-name hover:text-primary transition-all cursor-pointer'>
+                      {snippetNav.slice(0, 10)}...
+                    </span>
+                  </div>
                 </Link>
               </div>
             )}
@@ -190,9 +193,7 @@ export default function Container({
                   : '',
                 // 'divide-y divide-gray-300 dark:divide-gray-700',
                 'rounded-lg',
-                writingNav
-                  ? 'shadow-2xl dark:shadow-gray-800/90 dark:bg-black dark:bg-opacity-70 pt-6 bg-primary max-w-5xl'
-                  : ''
+                writingNav ? 'max-w-full' : ''
               )}
             >
               <div className='flex flex-col gap-2'>
