@@ -1,16 +1,45 @@
 import Container from '@components/Container'
-import ProjectsLayout from '@components/ProjectsLayout'
+import ProjectGrid from '@components/ProjectGrid'
+
+const images = [
+  {
+    src: 'https://www.notion.so/front-static/meta/default.png',
+    link: 'https://www.example.com',
+    title: 'Image 1 Title',
+  },
+  {
+    src: 'https://tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg',
+    link: 'https://www.example.com',
+    title: 'Image 2 Title',
+  },
+  {
+    src: 'https://www.raycast.com/api/extension-og?handle=ron-myers&name=terminal',
+    link: 'https://www.example.com',
+    title: 'Image 3 Title',
+  },
+  {
+    src: 'https://www.raycast.com/api/extension-og?handle=ron-myers&name=terminal',
+    link: 'https://www.example.com',
+    title: 'Image 3 Title',
+  },
+  {
+    src: '',
+    link: 'https://www.example.com',
+    title: 'Image 3 Title',
+  },
+  {
+    src: 'https://www.raycast.com/api/extension-og?handle=ron-myers&name=terminal',
+    link: 'https://www.example.com',
+    title: 'Image 3 Title',
+  },
+]
 
 const Tools = () => {
   return (
     <Container footer={true}>
       <div className='flex flex-col gap-6'>
-        <div className='flex flex-col gap-2 text-secondary'>
-          <p>A congruence of theory and practice</p>
-        </div>
-
         <div>
-          <ProjectsLayout />
+          <ProjectGrid images={images} />
         </div>
       </div>
     </Container>
