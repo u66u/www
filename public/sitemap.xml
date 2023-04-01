@@ -17,11 +17,31 @@
   </url>
 
   <url>
-    <loc>https://cretu.dev/snippet/c sharp test</loc>
+    <loc>https://cretu.dev/snippet/A simple algorithm in Scala</loc>
   </url>
 
   <url>
-    <loc>https://cretu.dev/snippet/python_numerals</loc>
+    <loc>https://cretu.dev/snippet/A simple population simulation</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/snippet/An implemention of Dijkstra algorithm</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://cretu.dev/snippet/Analyzing runtime of a quicksort algorithm</loc
+    >
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/snippet/Converting integers to roman numerals</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://cretu.dev/snippet/Simple Game of Life simulation in Python</loc
+    >
   </url>
 
   <url>
