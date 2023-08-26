@@ -67,7 +67,9 @@ export default function Container({
       <CommandMenu opened={isOpen} setOpened={setIsOpen} />
       <div
         className={cn(
-          writingNav ? '' : '',
+          writingNav
+            ? ' bg-inherit'
+            : '',
           snippetNav
             ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
             : '',
@@ -109,7 +111,7 @@ export default function Container({
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-5xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
+          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
             <Link href='/'>
               <a className='relative h-10 w-10'>
                 <Image
@@ -134,16 +136,11 @@ export default function Container({
                     Snippets
                   </a>
                 </Link>
-                <span className=''>/</span>
+                <span>/</span>
                 <Link href={`/snippet/${snippetNav}`}>
-                  <div className='flex'>
-                    <a className='hidden md:block hover:text-primary transition-all cursor-pointer'>
-                      {snippetNav}
-                    </a>
-                    <span className='md:hidden truncate-post-name hover:text-primary transition-all cursor-pointer'>
-                      {snippetNav.slice(0, 10)}...
-                    </span>
-                  </div>
+                  <a className='hover:text-primary transition-all cursor-pointer'>
+                    Content
+                  </a>
                 </Link>
               </div>
             )}
@@ -193,7 +190,9 @@ export default function Container({
                   : '',
                 // 'divide-y divide-gray-300 dark:divide-gray-700',
                 'rounded-lg',
-                writingNav ? 'max-w-full' : ''
+                writingNav
+                  ? ''
+                  : ''
               )}
             >
               <div className='flex flex-col gap-2'>
