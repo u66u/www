@@ -31,7 +31,6 @@ const Projects = () => {
               <Image
                 alt=''
                 src='/images/22.png'
-                layout='fill'
                 className='absolute top-0 object-center w-3/5 sm:w-80% h-auto pt-auto sm:pt-16 opacity-40'
               />
             </div>
@@ -51,7 +50,6 @@ const Projects = () => {
               <Image
                 alt=''
                 src='/images/111.png'
-                layout='fill'
                 className='absolute top-0 object-center w-3/5 h-auto mt-8'
               />
             </div>
@@ -71,7 +69,6 @@ const Projects = () => {
               <Image
                 alt=''
                 src='/images/111.png'
-                layout='fill'
                 className='absolute top-0 object-center w-3/5 h-auto mt-8'
               />
             </div>
