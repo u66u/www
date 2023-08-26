@@ -73,7 +73,6 @@ export default function Container({
           snippetNav
             ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
             : '',
-
           'text-primary',
           'relative h-full min-h-screen w-full',
           'flex flex-col',

@@ -38,7 +38,7 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
         label: 'Index',
       }}
     >
-      <h1 className='font-semibold text-xl'>Writing</h1>
+      <h1 className='font-semibold text-xl pb-2'>Writing</h1>
       <div className='mb-4'>
         {categories.map(category => (
           <button

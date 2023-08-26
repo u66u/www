@@ -69,10 +69,22 @@ const Snippet = defineDocumentType(() => ({
   },
   computedFields,
 }))
+const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: 'project/*.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    description: { type: 'string', required: true },
+    image: { type: 'string', required: true },
+    link:  { type: 'string', required: false },
+  },
+  computedFields,
+}))
 
 const contentLayerConfig = makeSource({
   contentDirPath: 'data',
-  documentTypes: [Writing, Snippet],
+  documentTypes: [Writing, Snippet, Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
