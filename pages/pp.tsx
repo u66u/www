@@ -28,7 +28,7 @@ const pp = ({ projects }: { projects: Project[] }) => {
             <div key={project._id} className="w-full">
               <button
                 className={cn(
-                  'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md w-full',
+                  'flex flex-col sm:flex-row justify-between py-2 px-2 -mx-2 rounded-md w-full',
                   'hover:bg-gray-200 dark:hover:bg-gray-800',
                   'transition-all duration-200'
                 )}
@@ -37,14 +37,14 @@ const pp = ({ projects }: { projects: Project[] }) => {
                 <img
                   src={images[index % images.length]}
                   alt='Project image'
-                  className='text-quaternary w-6 h-6 object-cover object-center rounded-full ml-2'
+                  className='w-6 h-6 object-cover object-center rounded-full ml-2 flex-shrink-0'
                 />
                 <span className='flex-grow  text-left ml-3 mr-2'>{project.title}</span>
               </button>
               {selectedProjects.includes(project._id) && (
-                <div className='flex mt-4'>
-                  <img src={project.image} alt='Project image' className='w-1/2' />
-                  <div className='ml-4'>
+                <div className='flex flex-col sm:flex mt-4'>
+                  <img src={project.image} alt='Project image' className='w-full sm:w-1/2' />
+                  <div className='mt-4 sm:ml-4'>
                     <h2 className='text-2xl font-bold'>{project.title}</h2>
                     <p className='mt-2'>{project.description}</p>
                     {project.link && (
@@ -76,4 +76,3 @@ const pp = ({ projects }: { projects: Project[] }) => {
       },
     }
   }
-  
