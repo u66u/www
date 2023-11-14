@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 
 import { pick } from 'contentlayer/client'
+import Link from 'next/link'
 
 import BlogPostList from '@components/BlogPostList'
 import Container from '@components/Container'
@@ -73,7 +74,6 @@ const Home = ({ posts }: { posts: Writing[] }) => {
               <h3 className='font-semibold text-xl'>Recent posts</h3>
               <Suspense fallback={null}>
                 <BlogPostList posts={posts} />
-                <LatestProjects />
                 <Box className='overflow-hidden'>
                   <Section>
                     <h2 className='text-xl font-medium text-theme-heading'>
@@ -86,6 +86,13 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                     </div>
                   </Section>
                 </Box>
+                <Link href='/projects'>
+                  <button className='relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400'>
+                    <span className='relative w-full px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                      See all projects
+                    </span>
+                  </button>
+                </Link>
               </Suspense>
             </div>
           </header>
