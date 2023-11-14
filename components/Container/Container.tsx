@@ -67,9 +67,7 @@ export default function Container({
       <CommandMenu opened={isOpen} setOpened={setIsOpen} />
       <div
         className={cn(
-          writingNav
-            ? ' bg-inherit'
-            : '',
+          writingNav ? ' bg-inherit' : '',
           snippetNav
             ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
             : '',
@@ -190,9 +188,7 @@ export default function Container({
                   : '',
                 // 'divide-y divide-gray-300 dark:divide-gray-700',
                 'rounded-lg',
-                writingNav
-                  ? ''
-                  : ''
+                writingNav ? '' : ''
               )}
             >
               <div className='flex flex-col gap-2'>
