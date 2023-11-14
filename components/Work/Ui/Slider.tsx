@@ -71,7 +71,7 @@ export default function Slider({ slides, containerClassName }: SliderProps) {
               className={clsx(
                 '!static aspect-video w-[40rem] rounded-xl bg-theme-surface object-cover',
                 active === idx &&
-                  'ring-1 ring-theme-outline ring-offset-2 ring-offset-theme-background'
+                  'ring-1 ring-theme-outline ring-offset-2 ring-offset-workuiblack'
               )}
             />
           </motion.li>

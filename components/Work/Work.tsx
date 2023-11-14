@@ -12,7 +12,7 @@ export function Work(work: typeof works[number]) {
           href={work.link}
           target='_blank'
           rel='noopener noreferrer'
-          className='group relative h-12 w-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-theme-outline ring-offset-2 ring-offset-theme-background'
+          className='group relative h-12 w-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-theme-outline ring-offset-2 ring-offset-workuiblack'
         >
           <Image
             src={work.logo}

@@ -39,6 +39,7 @@ module.exports = {
         twitter: '#479BEA',
         current: 'currentColor',
         transparent: 'transparent',
+        workuiblack: 'hsl(0, 0%, 8%)'
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
