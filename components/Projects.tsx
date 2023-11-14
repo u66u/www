@@ -37,8 +37,8 @@ const Card: React.FC<CardProps> = ({
           </div>
         )}
         <div className='card-info-wrapper'>
-          <div className='card-info'>
-            <div className='card-info-title pt-0 sm:pt-52'>
+          <div className='card-info '>
+            <div className='card-info-title'>
               <h3>{title}</h3>
               <h4>{subtitle}</h4>
             </div>
@@ -71,14 +71,18 @@ const Projects = () => {
 
   return (
     <div id='cards '>
-      <div className='grid grid-cols-2 grid-rows-2 sm:grid-cols-1 md:grid-cols-2 gap-4 text-white'>
+      <div className='grid grid-cols-2 grid-rows-2 gap-4 text-white'>
         <Card
           title='Apartments'
           image='/images/gif.gif'
           subtitle='Places to be apart. Wait, what?'
           type='fullHeight'
         />
-        <Card title='test' subtitle='Places to be apart. Wait, what?' />
+        <Card
+          title='test'
+          image='/images/pie-long.png'
+          subtitle='Places to be apart. Wait, what?'
+        />
         <Card title='Apartments' subtitle='Places to be apart. Wait, what?' />
         <Card title='test' subtitle='Places to be apart. Wait, what?' />
 
@@ -86,6 +90,7 @@ const Projects = () => {
         <Card
           title='test'
           subtitle='Places to be apart. Wait, what?'
+          image='/images/pie-long.png'
           type='fullWidth'
         />
       </div>

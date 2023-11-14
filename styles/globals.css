@@ -460,7 +460,7 @@
 .card-image {
   align-items: center;
   display: flex;
-  height: 85%;
+  height: 140px;
   justify-content: center;
   overflow: hidden;
 }
