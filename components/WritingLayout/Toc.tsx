@@ -2,10 +2,10 @@
 
 import { FC, useState } from 'react'
 import styles from '@css/slug.module.css'
-import useWindowSize, { Size } from '@components/WritingLayout/UseWindowSize'
+import { Writing } from 'contentlayer/generated'
+import useWindowSize, { Size } from './UseWindowSize'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FiChevronDown } from 'react-icons/fi'
-import { Writing } from 'contentlayer/generated'
 
 export type TOC = { toc: { value: string; url: string; depth: number }[] }
 
@@ -32,7 +32,7 @@ const TOC: FC<Writing> = ({ toc }) => {
           aria-expanded={open}
           aria-controls='sect1'
         >
-          <button onClick={() => setOpen((o) => !o)}>
+          <button onClick={() => setOpen(o => !o)}>
             <h2>Contents</h2>
             <FiChevronDown
               style={{ transform: open ? 'rotateZ(180deg)' : 'rotateZ(0deg)' }}

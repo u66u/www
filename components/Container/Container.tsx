@@ -197,7 +197,7 @@ export default function Container({
                 : '',
               // 'divide-y divide-gray-300 dark:divide-gray-700',
               'rounded-lg',
-              writingNav ? '' : ''
+              writingNav ? 'max-w-5xl' : ''
             )}
           >
             <div className='flex flex-col gap-2'>
