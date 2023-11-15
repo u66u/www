@@ -10,6 +10,26 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 
 
+const rehypePrettyCodeOptions: Partial<Options> = {
+  theme: 'poimandres',
+  tokensMap: {
+    fn: 'entity.name.function',
+    objKey: 'meta.object-literal.key',
+  },
+  onVisitLine(node: any) {
+    if (node.children.length === 0) {
+      node.children = [{ type: 'text', value: ' ' }];
+    }
+    if (node.properties.className) {
+      node.properties.className.push('syntax-line');
+    } else {
+      node.properties.className = ['syntax-line'];
+    }
+  },
+  onVisitHighlightedChars(node: any) {
+    node.properties.className = ['syntax-word--highlighted'];
+  },
+};
 
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: doc => readingTime(doc.body.raw) },
@@ -55,6 +75,7 @@ const contentLayerConfig = makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
+      [rehypePrettyCode, rehypePrettyCodeOptions],
       [
         rehypeAutolinkHeadings,
         {
