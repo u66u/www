@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import Image from 'next/image'
+import Image from "next/image"
 
 interface CardProps {
   title: string
@@ -30,10 +30,12 @@ const Card: React.FC<CardProps> = ({
             <Image
               alt=''
               src={image}
-              layout='fill'
-              objectFit='cover'
               className='absolute top-0 object-center w-3/5 sm:w-80% h-auto pt-auto sm:pt-16 opacity-40'
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
         )}
         <div className='card-info-wrapper'>
@@ -46,7 +48,7 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const Projects = () => {

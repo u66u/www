@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 
 import clsx from 'clsx'
 import { type PanInfo, motion } from 'framer-motion'
-import Image from 'next/image'
+import Image from "next/image"
 
 import { ArrowLeftIcon } from './ArrowLeft'
 import { ArrowRightIcon } from './ArrowRight'

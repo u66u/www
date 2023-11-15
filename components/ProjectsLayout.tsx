@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image"
 import Link from 'next/link'
 
 const ProjectsLayout = () => {
@@ -22,8 +22,11 @@ const ProjectsLayout = () => {
                     alt='Cover image for playground section'
                     width={1600}
                     height={900}
-                    layout='responsive'
-                  />
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto"
+                    }} />
                 </div>
               </div>
             </a>
@@ -40,8 +43,11 @@ const ProjectsLayout = () => {
                 alt='Pie for Pi-hole, a raycast extension'
                 width={620}
                 height={350}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
           <div>
@@ -58,8 +64,11 @@ const ProjectsLayout = () => {
                     alt='Cover image for playground section'
                     width={900}
                     height={500}
-                    layout='responsive'
-                  />
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto"
+                    }} />
                 </div>
               </div>
             </a>
@@ -76,8 +85,11 @@ const ProjectsLayout = () => {
                 alt='Guide to leading a sustainable lifestyle in india'
                 width={620}
                 height={350}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
 
@@ -92,8 +104,11 @@ const ProjectsLayout = () => {
                 alt='Article about tools I use'
                 width={620}
                 height={302}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
         </div>
@@ -107,8 +122,11 @@ const ProjectsLayout = () => {
                 alt='Pie for Pi-hole, a raycast extension'
                 width={360}
                 height={493}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
 
@@ -120,8 +138,11 @@ const ProjectsLayout = () => {
                 alt='Article about tools I use'
                 width={360}
                 height={302}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
 
@@ -133,14 +154,17 @@ const ProjectsLayout = () => {
                 alt='Guide to leading a sustainable lifestyle in india'
                 width={100}
                 height={50}
-                layout='responsive'
-              />
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }} />
             </div>
           </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default ProjectsLayout

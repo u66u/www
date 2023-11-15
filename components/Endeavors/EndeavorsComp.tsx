@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from 'next/image'
+import Image from "next/image"
 
 import type { Endeavor } from '@data/endeavors/endeavorsItems'
 import { cn } from '@lib/classNames'
@@ -32,13 +32,15 @@ export function Endeavors({ endeavor }: IEndeavorsProps): JSX.Element {
         <Image
           src={endeavor.img}
           alt={endeavor.title}
-          objectFit='cover'
-          layout='fill'
           className={cn(
             'rounded-xl',
             'transition-opacity duration-200 opacity-50 lg:opacity-100 lg:group-hover:opacity-30'
           )}
-        />
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }} />
         <div
           className={cn(
             'absolute bottom-0 left-0',
@@ -54,7 +56,7 @@ export function Endeavors({ endeavor }: IEndeavorsProps): JSX.Element {
         </div>
       </>
     </a>
-  )
+  );
 }
 
 export const MemoizedEndeavors = React.memo(Endeavors)

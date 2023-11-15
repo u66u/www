@@ -6,7 +6,7 @@ import splitbee from '@splitbee/web'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from "next/image"
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -109,15 +109,17 @@ export default function Container({
         leaveTo='opacity-0 scale-95'
       >
         <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
-          <Link href='/' className='relative h-10 w-10'>
+          <Link href='/' className='relative h-12 w-12'>
 
             <Image
-              src='/static/images/logo.png'
+              src='/static/images/bg_75.gif'
               alt='logo'
               className='absolute inset-0 object-cover rounded-full'
-              objectFit='cover'
-              layout='fill'
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }} />
 
           </Link>
           {snippetNav && (

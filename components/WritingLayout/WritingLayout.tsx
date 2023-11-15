@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 
 import { format, parseISO } from 'date-fns'
-import Image from 'next/image'
+import Image from "next/image"
 
 import Container from '@components/Container'
 import ExternalLink from '@components/ExternalLink'
@@ -43,11 +43,13 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
           <div className='relative w-full h-96 mt-8'>
             <Image
               src={post.image}
-              layout='fill'
-              objectFit='cover'
               alt={`${post.title}`}
               className='rounded-lg'
-            ></Image>
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }}></Image>
           </div>
         )}
         <Suspense fallback={null}>
@@ -57,5 +59,5 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
         </Suspense>
       </article>
     </Container>
-  )
+  );
 }
