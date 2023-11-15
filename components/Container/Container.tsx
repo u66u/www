@@ -112,7 +112,7 @@ export default function Container({
           <Link href='/' className='relative h-12 w-12'>
 
             <Image
-              src='/static/images/bg_75.gif'
+              src='/static/images/bg_75.gif' // logo
               alt='logo'
               className='absolute inset-0 object-cover rounded-full'
               fill
@@ -122,7 +122,7 @@ export default function Container({
               }} />
 
           </Link>
-          {snippetNav && (
+          {snippetNav && ( // menu
             <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
               <Link href='/' className='hover:text-primary transition-all cursor-pointer'>
                 
@@ -197,7 +197,7 @@ export default function Container({
                 : '',
               // 'divide-y divide-gray-300 dark:divide-gray-700',
               'rounded-lg',
-              writingNav ? '' : ''
+              writingNav ? 'max-w-full' : ''
             )}
           >
             <div className='flex flex-col gap-2'>

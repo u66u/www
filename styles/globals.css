@@ -598,3 +598,8 @@
 .link > span {
   color: white;
 }
+
+
+.toc-list {
+  padding-left: 1em;
+}
