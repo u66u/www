@@ -68,28 +68,29 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
         ))}
       </div>
       {filteredPosts?.map((post, index) => (
-        <Link key={post.slug} href={`/writing/${post.slug}`}>
-          <a
-            className={cn(
-              'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
-              'hover:bg-gray-200 dark:hover:bg-gray-800',
-              'transition-all duration-200'
-            )}
-          >
-            <img
-              src={images[index % 6]}
-              alt='Post image'
-              className='text-quaternary w-6 h-6 object-cover object-center rounded-full ml-2'
-            />
-            <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
-            <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
-              {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
-            </span>
-          </a>
-        </Link>
+        (<Link
+          key={post.slug}
+          href={`/writing/${post.slug}`}
+          className={cn(
+            'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
+            'hover:bg-gray-200 dark:hover:bg-gray-800',
+            'transition-all duration-200'
+          )}>
+
+          <img
+            src={images[index % 6]}
+            alt='Post image'
+            className='text-quaternary w-6 h-6 object-cover object-center rounded-full ml-2'
+          />
+          <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
+          <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
+            {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
+          </span>
+
+        </Link>)
       ))}
     </Container>
-  )
+  );
 }
 
 export default WritingPage

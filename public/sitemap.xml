@@ -5,10 +5,6 @@
   </url>
 
   <url>
-    <loc>https://cretu.dev/pp</loc>
-  </url>
-
-  <url>
     <loc>https://cretu.dev/projects</loc>
   </url>
 
@@ -18,14 +14,6 @@
 
   <url>
     <loc>https://cretu.dev/writing</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/project/123</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/project/test</loc>
   </url>
 
   <url>
@@ -61,26 +49,6 @@
   </url>
 
   <url>
-    <loc>https://cretu.dev/writing/button copy 2</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/writing/button copy</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/writing/button</loc>
-  </url>
-
-  <url>
     <loc>https://cretu.dev/writing/gradients</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/writing/learn-web</loc>
-  </url>
-
-  <url>
-    <loc>https://cretu.dev/writing/test</loc>
   </url>
 </urlset>

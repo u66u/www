@@ -4,7 +4,7 @@
         <description><![CDATA[Max Sekletsov]]></description>
         <link>https://sekletsov.xyz</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 14 Nov 2023 13:28:37 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Nov 2023 00:03:20 GMT</lastBuildDate>
         <atom:link href="https://sekletsov.xyz/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[2021 in Review]]></title>
@@ -14,18 +14,11 @@
             <pubDate>Fri, 31 Dec 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Test1?]]></title>
-            <description><![CDATA[Deep dive into the process of building a complex button.]]></description>
-            <link>https://cretu.dev/writing/button copy 2</link>
-            <guid isPermaLink="true">https://cretu.dev/writing/button copy 2</guid>
-            <pubDate>Sun, 30 Jan 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[test]]></title>
-            <description><![CDATA[Summary of a great year.]]></description>
-            <link>https://cretu.dev/writing/test</link>
-            <guid isPermaLink="true">https://cretu.dev/writing/test</guid>
-            <pubDate>Fri, 31 Dec 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[Creating gradients]]></title>
+            <description><![CDATA[A 2 minute way of designing a beautiful and creative gradient wallpaper]]></description>
+            <link>https://cretu.dev/writing/gradients</link>
+            <guid isPermaLink="true">https://cretu.dev/writing/gradients</guid>
+            <pubDate>Thu, 28 Oct 2021 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -35,13 +35,20 @@ async function generate() {
     </urlset>
     `
 
-  const formatted = prettier.format(sitemap, {
-    ...prettierConfig,
-    parser: 'html',
-  })
+    const formatted = await prettier.format(sitemap, {
+      ...prettierConfig,
+      parser: 'html',
+    })
+    
 
   // eslint-disable-next-line no-sync
-  writeFileSync('public/sitemap.xml', formatted)
+  try {
+    writeFileSync('public/sitemap.xml', formatted);
+    console.log('Sitemap generated successfully.');
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+  }
+  
 }
 
 generate()

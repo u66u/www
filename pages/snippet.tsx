@@ -69,46 +69,46 @@ const SnippetPage = ({ posts }: { posts: Snippet[] }) => {
         ))}
       </div>
       {filteredPosts?.map(post => (
-        <Link key={post.slug} href={`/snippet/${post.slug}`}>
-          <a
-            className={cn(
-              'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
-              'hover:bg-gray-200 dark:hover:bg-gray-800',
-              'transition-all duration-200'
-            )}
+        (<Link
+          key={post.slug}
+          href={`/snippet/${post.slug}`}
+          className={cn(
+            'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
+            'hover:bg-gray-200 dark:hover:bg-gray-800',
+            'transition-all duration-200'
+          )}>
+
+          <svg
+            className='text-quaternary w-6 h-auto object-cover object-center ml-2'
+            viewBox='0 0 25 25'
+            fill='currentColor'
           >
+            <path
+              fill={categoryFill[post.category as keyof typeof categoryFill]}
+              d={categoryPaths[post.category as keyof typeof categoryPaths]}
+            />
+          </svg>
+          <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
+          <span className='text-tertiary'>
             <svg
-              className='text-quaternary w-6 h-auto object-cover object-center ml-2'
-              viewBox='0 0 25 25'
+              xmlns='http://www.w3.org/2000/svg'
+              width='25'
+              height='25'
               fill='currentColor'
+              className='bi bi-arrow-right'
+              viewBox='0 0 25 16'
             >
               <path
-                fill={categoryFill[post.category as keyof typeof categoryFill]}
-                d={categoryPaths[post.category as keyof typeof categoryPaths]}
+                fillRule='evenodd'
+                d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'
               />
             </svg>
+          </span>
 
-            <span className='flex-grow truncate ml-3 mr-2'>{post.title}</span>
-            <span className='text-tertiary'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='25'
-                height='25'
-                fill='currentColor'
-                className='bi bi-arrow-right'
-                viewBox='0 0 25 16'
-              >
-                <path
-                  fillRule='evenodd'
-                  d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'
-                />
-              </svg>
-            </span>
-          </a>
-        </Link>
+        </Link>)
       ))}
     </Container>
-  )
+  );
 }
 
 export default SnippetPage
