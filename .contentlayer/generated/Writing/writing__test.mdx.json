@@ -1,0 +1,28 @@
+{
+  "title": "test",
+  "publishedAt": "2021-12-31",
+  "summary": "Summary of a great year.",
+  "image": "/static/images/2021/banner.png",
+  "category": "test",
+  "body": {
+    "raw": "\ntest",
+    "code": "var Component=(()=>{var p=Object.create;var o=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var j=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),l=(t,e)=>{for(var n in e)o(t,n,{get:e[n],enumerable:!0})},c=(t,e,n,a)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!d.call(t,r)&&r!==n&&o(t,r,{get:()=>e[r],enumerable:!(a=g(e,r))||a.enumerable});return t};var y=(t,e,n)=>(n=t!=null?p(f(t)):{},c(e||!t||!t.__esModule?o(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>c(o({},\"__esModule\",{value:!0}),t);var m=j((O,i)=>{i.exports=_jsx_runtime});var C={};l(C,{default:()=>M,frontmatter:()=>b});var s=y(m()),b={title:\"test\",publishedAt:\"2021-12-31\",summary:\"Summary of a great year.\",image:\"/static/images/2021/banner.png\",category:\"test\"};function u(t){let e=Object.assign({p:\"p\"},t.components);return(0,s.jsx)(e.p,{children:\"test\"})}function h(t={}){let{wrapper:e}=t.components||{};return e?(0,s.jsx)(e,Object.assign({},t,{children:(0,s.jsx)(u,t)})):u(t)}var M=h;return _(C);})();\n;return Component;"
+  },
+  "_id": "writing/test.mdx",
+  "_raw": {
+    "sourceFilePath": "writing/test.mdx",
+    "sourceFileName": "test.mdx",
+    "sourceFileDir": "writing",
+    "contentType": "mdx",
+    "flattenedPath": "writing/test"
+  },
+  "type": "Writing",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.005,
+    "time": 300,
+    "words": 1
+  },
+  "wordCount": 2,
+  "slug": "test"
+}

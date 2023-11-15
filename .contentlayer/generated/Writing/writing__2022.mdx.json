@@ -1,0 +1,28 @@
+{
+  "title": "2022, a Look Back",
+  "publishedAt": "2021-12-31",
+  "summary": "Summary of a great year.",
+  "image": "/static/images/2021/banner.png",
+  "category": "personal",
+  "body": {
+    "raw": "test",
+    "code": "var Component=(()=>{var p=Object.create;var a=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var d=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var n in e)a(t,n,{get:e[n],enumerable:!0})},c=(t,e,n,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of x(e))!l.call(t,o)&&o!==n&&a(t,o,{get:()=>e[o],enumerable:!(s=g(e,o))||s.enumerable});return t};var y=(t,e,n)=>(n=t!=null?p(f(t)):{},c(e||!t||!t.__esModule?a(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>c(a({},\"__esModule\",{value:!0}),t);var m=d((D,i)=>{i.exports=_jsx_runtime});var k={};j(k,{default:()=>M,frontmatter:()=>b});var r=y(m()),b={title:\"2022, a Look Back\",publishedAt:\"2021-12-31\",summary:\"Summary of a great year.\",image:\"/static/images/2021/banner.png\",category:\"personal\"};function u(t){let e=Object.assign({p:\"p\"},t.components);return(0,r.jsx)(e.p,{children:\"test\"})}function h(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(u,t)})):u(t)}var M=h;return _(k);})();\n;return Component;"
+  },
+  "_id": "writing/2022.mdx",
+  "_raw": {
+    "sourceFilePath": "writing/2022.mdx",
+    "sourceFileName": "2022.mdx",
+    "sourceFileDir": "writing",
+    "contentType": "mdx",
+    "flattenedPath": "writing/2022"
+  },
+  "type": "Writing",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.005,
+    "time": 300,
+    "words": 1
+  },
+  "wordCount": 1,
+  "slug": "2022"
+}

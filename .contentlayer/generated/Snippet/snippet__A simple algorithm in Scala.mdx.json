@@ -1,0 +1,26 @@
+{
+  "title": "A simple algorithm in Scala",
+  "publishedAt": "2022-02-22",
+  "category": "Scala",
+  "body": {
+    "raw": "\n\n\n```\ndef sumList(lst: List[Int]): Int = lst.foldLeft(0)(_ + _)\n\nval myList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nval result = sumList(myList)\nprintln(result)\n```\n\nOutput:\n\n```\n55\n```\n",
+    "code": "var Component=(()=>{var p=Object.create;var s=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var y=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var g=(n,a)=>()=>(a||n((a={exports:{}}).exports,a),a.exports),x=(n,a)=>{for(var t in a)s(n,t,{get:a[t],enumerable:!0})},c=(n,a,t,d)=>{if(a&&typeof a==\"object\"||typeof a==\"function\")for(let l of h(a))!u.call(n,l)&&l!==t&&s(n,l,{get:()=>a[l],enumerable:!(d=m(a,l))||d.enumerable});return n};var f=(n,a,t)=>(t=n!=null?p(y(n)):{},c(a||!n||!n.__esModule?s(t,\"default\",{value:n,enumerable:!0}):t,n)),b=n=>c(s({},\"__esModule\",{value:!0}),n);var i=g((C,r)=>{r.exports=_jsx_runtime});var j={};x(j,{default:()=>N,frontmatter:()=>_});var e=f(i()),_={title:\"A simple algorithm in Scala\",publishedAt:\"2022-02-22\",category:\"Scala\"};function o(n){let a=Object.assign({div:\"div\",pre:\"pre\",code:\"code\",span:\"span\",p:\"p\"},n.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(a.div,{\"data-rehype-pretty-code-fragment\":\"\",children:(0,e.jsx)(a.pre,{className:\"poimandres\",style:{backgroundColor:\"#1b1e28\"},tabIndex:\"0\",\"data-language\":\"\",\"data-theme\":\"default\",children:(0,e.jsxs)(a.code,{\"data-language\":\"\",\"data-theme\":\"default\",style:{display:\"grid\"},children:[(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"},children:\"def sumList(lst: List[Int]): Int = lst.foldLeft(0)(_ + _)\"})}),`\n`,(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"}})}),`\n`,(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"},children:\"val myList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\"})}),`\n`,(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"},children:\"val result = sumList(myList)\"})}),`\n`,(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"},children:\"println(result)\"})})]})})}),`\n`,(0,e.jsx)(a.p,{children:\"Output:\"}),`\n`,(0,e.jsx)(a.div,{\"data-rehype-pretty-code-fragment\":\"\",children:(0,e.jsx)(a.pre,{className:\"poimandres\",style:{backgroundColor:\"#1b1e28\"},tabIndex:\"0\",\"data-language\":\"\",\"data-theme\":\"default\",children:(0,e.jsx)(a.code,{\"data-language\":\"\",\"data-theme\":\"default\",style:{display:\"grid\"},children:(0,e.jsx)(a.span,{className:\"syntax-line\",\"data-line\":\"\",children:(0,e.jsx)(a.span,{style:{color:\"#a6accd\"},children:\"55\"})})})})})]})}function L(n={}){let{wrapper:a}=n.components||{};return a?(0,e.jsx)(a,Object.assign({},n,{children:(0,e.jsx)(o,n)})):o(n)}var N=L;return b(j);})();\n;return Component;"
+  },
+  "_id": "snippet/A simple algorithm in Scala.mdx",
+  "_raw": {
+    "sourceFilePath": "snippet/A simple algorithm in Scala.mdx",
+    "sourceFileName": "A simple algorithm in Scala.mdx",
+    "sourceFileDir": "snippet",
+    "contentType": "mdx",
+    "flattenedPath": "snippet/A simple algorithm in Scala"
+  },
+  "type": "Snippet",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.16,
+    "time": 9600,
+    "words": 32
+  },
+  "wordCount": 34,
+  "slug": "A simple algorithm in Scala"
+}
