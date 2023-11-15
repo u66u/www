@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import { format, parseISO } from 'date-fns'
 import Image from "next/image"
-
+import Toc from './Toc'
 import Container from '@components/Container'
 import ExternalLink from '@components/ExternalLink'
 import { Writing } from 'contentlayer/generated'
@@ -54,6 +54,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
         )}
         <Suspense fallback={null}>
           <div className='w-full my-4 prose dark:prose-dark max-w-4xl'>
+            <Toc />
             {children}
           </div>
         </Suspense>

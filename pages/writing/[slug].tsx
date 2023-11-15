@@ -10,6 +10,7 @@ const Post = ({ post }: { post: Writing }) => {
 
   return (
     <WritingLayout post={post}>
+       <div className="js-toc-content">
       <Component
         components={
           {
@@ -18,6 +19,7 @@ const Post = ({ post }: { post: Writing }) => {
           } as any
         }
       />
+    </div>
     </WritingLayout>
   )
 }

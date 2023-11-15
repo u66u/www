@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from 'next/link'
 
 import DownloadImage from '@components/DownloadImage'
-
+import Toc from "@components/WritingLayout/Toc"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomLink = (props: any) => {
   const href = props.href
@@ -23,6 +23,7 @@ const MDXComponents = {
   Image,
   a: CustomLink,
   DownloadImage,
+  Toc
 }
 
 export default MDXComponents
