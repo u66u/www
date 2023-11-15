@@ -1,6 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-
+import TOC from '@components/WritingLayout/Toc'
 import components from '@components/MDXComponents'
 import WritingLayout from '@components/WritingLayout'
 import { allWritings, Writing } from 'contentlayer/generated'
@@ -10,6 +10,7 @@ const Post = ({ post }: { post: Writing }) => {
 
   return (
     <WritingLayout post={post}>
+
       <Component
         components={
           {

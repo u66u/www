@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-
+import TOC from './Toc'
 import { format, parseISO } from 'date-fns'
 import Image from "next/image"
 
@@ -24,6 +24,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
       page='writing'
     >
       <article className='flex flex-col items-start justify-center w-full max-w-4xl mt-5 mx-auto'>
+        
         <h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
           {post.title}
         </h1>
@@ -58,6 +59,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
           </div>
         </Suspense>
       </article>
+      
     </Container>
   );
 }

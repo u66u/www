@@ -19,7 +19,8 @@
       "contentlayer/generated": ["./.contentlayer/generated"],
       "@components/*": ["components/*"],
       "@data/*": ["data/*"],
-      "@lib/*": ["lib/*"]
+      "@lib/*": ["lib/*"],
+      "@css/*": ["styles/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".contentlayer/generated"],

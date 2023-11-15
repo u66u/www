@@ -9,6 +9,36 @@ import rehypePrettyCode, { Options } from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 
+import { VFile } from 'vfile'
+import { Parent } from 'unist'
+import { visit } from 'unist-util-visit'
+import { slug } from 'github-slugger'
+import { toString } from 'mdast-util-to-string'
+import { remark } from 'remark'
+
+export type Toc = {
+  value: string
+  depth: number
+  url: string
+}
+
+export const remarkTocHeadings = () => (tree: Parent, file: VFile) => {
+  const toc: Toc[] = []
+
+  visit(tree, 'heading', (node: { depth: number }) => {
+    const textContent = toString(node)
+    toc.push({
+      value: textContent,
+      url: '#' + slug(toString(node)),
+      depth: node.depth,
+    })
+  })
+
+  file.data.toc = toc
+}
+
+export const extractTocHeadings = async (markdown: string): Promise<Toc> =>
+  (await remark().use(remarkTocHeadings).process(markdown)).data as any
 
 const rehypePrettyCodeOptions: Partial<Options> = {
   theme: 'poimandres',
@@ -18,20 +48,21 @@ const rehypePrettyCodeOptions: Partial<Options> = {
   },
   onVisitLine(node: any) {
     if (node.children.length === 0) {
-      node.children = [{ type: 'text', value: ' ' }];
+      node.children = [{ type: 'text', value: ' ' }]
     }
     if (node.properties.className) {
-      node.properties.className.push('syntax-line');
+      node.properties.className.push('syntax-line')
     } else {
-      node.properties.className = ['syntax-line'];
+      node.properties.className = ['syntax-line']
     }
   },
   onVisitHighlightedChars(node: any) {
-    node.properties.className = ['syntax-word--highlighted'];
+    node.properties.className = ['syntax-word--highlighted']
   },
-};
+}
 
 const computedFields: ComputedFields = {
+  toc: { type: 'json', resolve: doc => extractTocHeadings(doc.body.raw) },
   readingTime: { type: 'json', resolve: doc => readingTime(doc.body.raw) },
   wordCount: {
     type: 'number',
