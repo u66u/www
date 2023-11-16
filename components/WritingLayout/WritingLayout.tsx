@@ -22,7 +22,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
       page='writing'
     >
       <article className='flex flex-col md:flex-row items-start justify-center w-full max-w-5xl mt-5 mx-auto'>
-        <div className='flex-1 md:border-r pr-4 border-gray-300 dark:border-gray-800'>
+        <div className='flex-1 md:border-r md:pr-4 border-gray-300 dark:border-gray-800'>
           <h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
             {post.title}
           </h1>
@@ -85,7 +85,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
             </div>
           </Suspense>
         </div>
-        <div className='pl-3 sticky top-0 md:block hidden'>
+        <div className='md:pl-3 pl-0 sticky top-0 md:block hidden'>
           <TOC
             toc={post.toc}
             _id={''}
