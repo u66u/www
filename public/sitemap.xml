@@ -5,6 +5,10 @@
   </url>
 
   <url>
+    <loc>https://cretu.dev/pp</loc>
+  </url>
+
+  <url>
     <loc>https://cretu.dev/projects</loc>
   </url>
 
@@ -14,6 +18,14 @@
 
   <url>
     <loc>https://cretu.dev/writing</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/project/123</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/project/test</loc>
   </url>
 
   <url>
