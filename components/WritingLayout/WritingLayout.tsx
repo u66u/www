@@ -2,7 +2,6 @@ import { Suspense } from 'react'
 import TOC from './Toc'
 import { format, parseISO } from 'date-fns'
 import Image from 'next/image'
-
 import Container from '@components/Container'
 import { Writing } from 'contentlayer/generated'
 
@@ -23,7 +22,7 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
       page='writing'
     >
       <article className='flex flex-col md:flex-row items-start justify-center w-full max-w-5xl mt-5 mx-auto'>
-        <div className='flex-1 border-r pr-4 border-gray-300 dark:border-gray-800'>
+        <div className='flex-1 md:border-r pr-4 border-gray-300 dark:border-gray-800'>
           <h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
             {post.title}
           </h1>
@@ -54,12 +53,39 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
             </div>
           )}
           <Suspense fallback={null}>
+            <div className='pt-3 top-0 md:hidden block'>
+          <TOC
+            toc={post.toc}
+            _id={''}
+            _raw={{
+              sourceFilePath: '',
+              sourceFileName: '',
+              sourceFileDir: '',
+              contentType: 'data',
+              flattenedPath: '',
+            }}
+            type={'Writing'}
+            title={''}
+            publishedAt={''}
+            summary={''}
+            image={''}
+            category={''}
+            body={{
+              raw: '',
+              code: '',
+            }}
+            readingTime={undefined}
+            wordCount={0}
+            slug={''}
+          />
+        </div>
             <div className='w-full my-4 prose dark:prose-dark max-w-5xl'>
+              
               {children}
             </div>
           </Suspense>
         </div>
-        <div className='pl-3 sticky top-0'>
+        <div className='pl-3 sticky top-0 md:block hidden'>
           <TOC
             toc={post.toc}
             _id={''}

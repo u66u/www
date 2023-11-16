@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-
+import Menu from '@components/Menu'
 import { Transition } from '@headlessui/react'
 import splitbee from '@splitbee/web'
 import { LazyMotion, domAnimation, m } from 'framer-motion'

@@ -1,7 +1,6 @@
 'use client'
-
 import { FC, useState } from 'react'
-import styles from '@css/slug.module.css'
+import styles from '@css/toc.module.css'
 import { Writing } from 'contentlayer/generated'
 import useWindowSize, { Size } from './UseWindowSize'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -32,12 +31,16 @@ const TOC: FC<Writing> = ({ toc }) => {
           aria-expanded={open}
           aria-controls='sect1'
         >
-          <button onClick={() => setOpen(o => !o)}>
-            <h2>Contents</h2>
-            <FiChevronDown
-              style={{ transform: open ? 'rotateZ(180deg)' : 'rotateZ(0deg)' }}
-            />
+          <button
+            className='w-full dark:bg-gray-800 bg-opacity-80 bg-gray-300 p-3 rounded-md'
+            onClick={() => setOpen(o => !o)}
+          >
+            <div className='flex items-center'>
+              <h2 className='mr-2'>Contents</h2>
+              <FiChevronDown />
+            </div>
           </button>
+
           <AnimatePresence initial={false}>
             {open && (
               <motion.nav
