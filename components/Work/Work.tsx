@@ -14,7 +14,7 @@ export function Work(work: typeof works[number]) {
           rel='noopener noreferrer'
           className='group relative h-12 w-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-theme-outline ring-offset-2 ring-offset-workuiblack'
         >
-          <Image
+          <img
             src={work.logo}
             alt={work.title}
             width={48}
