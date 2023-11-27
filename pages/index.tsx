@@ -5,14 +5,12 @@ import Link from 'next/link'
 
 import BlogPostList from '@components/BlogPostList'
 import Container from '@components/Container'
-import LatestProjects from '@components/LatestProjects'
 import Box from '@components/Work/Ui/Box'
 import Layout from '@components/Work/Ui/Layout'
 import Section from '@components/Work/Ui/Section'
 import { Work } from '@components/Work/Work'
 import { works } from '@components/Work/WorkInterface'
 import type { Writing } from 'contentlayer/generated'
-
 import { allWritings } from '.contentlayer/generated'
 
 const Home = ({ posts }: { posts: Writing[] }) => {
@@ -27,8 +25,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                   <h1 className='font-semibold text-lg text-white mb-1.5'>
                     Max Sekletsov
                   </h1>
-
-                  <h2 className='font-extrabold text-2xl leading-tight text-white'>
+                  <h2 className='font-semibold leading-tight text-lg text-white'>
                     Human longevity, math, philosophy, AI, and languages.
                   </h2>
                 </div>
@@ -74,13 +71,11 @@ const Home = ({ posts }: { posts: Writing[] }) => {
               <h3 className='font-semibold text-xl'>Recent posts</h3>
               <Suspense fallback={null}>
                 <BlogPostList posts={posts} />
+                <h2 className='mt-2 text-xl font-semibold '>Work</h2>
                 <Box className='overflow-hidden'>
                   <Section>
-                    <h2 className='text-xl font-medium text-theme-heading'>
-                      Experiences
-                    </h2>
-                    <div className='mt-6 flex flex-col gap-y-16'>
-                      {works.map((work, idx) => (
+                    <div className='flex flex-col gap-y-16'>
+                      {works.slice(0, 3).map((work, idx) => (
                         <Work {...work} key={idx} />
                       ))}
                     </div>
@@ -89,7 +84,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                 <Link href='/projects' legacyBehavior>
                   <button className='relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400'>
                     <span className='relative w-full px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                      See all projects
+                      See all work
                     </span>
                   </button>
                 </Link>
@@ -99,7 +94,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
         </Container>
       </Suspense>
     </Layout>
-  );
+  )
 }
 
 export default Home

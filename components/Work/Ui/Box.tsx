@@ -7,7 +7,7 @@ export default function Box({ children, ...props }: BoxProps) {
     <div
       {...props}
       className={clsx(
-        'px-6 py-12 first:pt-24 last:pb-24 first:lg:pt-32 last:lg:pb-32',
+        'px-2 py-2 md:px-3 md:py-3',
         props.className
       )}
     >

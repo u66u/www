@@ -6,7 +6,7 @@ export default function Section({ children, ...props }: SectionProps) {
   return (
     <section
       {...props}
-      className={clsx('mx-auto w-full max-w-screen-sm', props.className)}
+      className={clsx('mx-auto w-full max-w-full ', props.className)}
     >
       {children}
     </section>

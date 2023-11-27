@@ -17,6 +17,14 @@
   </url>
 
   <url>
+    <loc>https://cretu.dev/project/123</loc>
+  </url>
+
+  <url>
+    <loc>https://cretu.dev/project/test</loc>
+  </url>
+
+  <url>
     <loc>https://cretu.dev/snippet/A simple algorithm in Scala</loc>
   </url>
 
