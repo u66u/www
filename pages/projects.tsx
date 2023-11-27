@@ -9,7 +9,7 @@ import Section from '@components/Work/Ui/Section'
 const Tools = () => {
   return (
     <Layout>
-      <Container footer={true}>
+      <Container page={'index'}>
         <Box className='overflow-hidden'>
           <Section>
             <h2 className='text-xl font-medium text-theme-heading'>Work</h2>

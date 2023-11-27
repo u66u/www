@@ -25,7 +25,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                   <h1 className='font-semibold text-lg text-white mb-1.5'>
                     Max Sekletsov
                   </h1>
-                  <h2 className='font-semibold leading-tight text-lg ext-white'>
+                  <h2 className='font-semibold leading-tight text-lg text-white'>
                     Human longevity, math, philosophy, AI, and languages.
                   </h2>
                 </div>
