@@ -11,28 +11,28 @@ export default function Document() {
           type='font/woff2'
           crossOrigin='anonymous'
         />
-        <link href='/static/favicons/favicon.ico' rel='shortcut icon' />
-        <link href='/static/favicons/site.webmanifest' rel='manifest' />
+        <link href='/favicons/favicon.ico' rel='shortcut icon' />
+        <link href='/favicons/site.webmanifest' rel='manifest' />
         <link
-          href='/static/favicons/apple-touch-icon.png'
+          href='/favicons/apple-touch-icon.png'
           rel='apple-touch-icon'
           sizes='180x180'
         />
         <link
-          href='/static/favicons/favicon-32x32.png'
+          href='/favicons/favicon-32x32.png'
           rel='icon'
           sizes='32x32'
           type='image/png'
         />
         <link
-          href='/static/favicons/favicon-16x16.png'
+          href='/favicons/favicon-16x16.png'
           rel='icon'
           sizes='16x16'
           type='image/png'
         />
         <link
           color='#4a9885'
-          href='/static/favicons/safari-pinned-tab.svg'
+          href='/favicons/safari-pinned-tab.svg'
           rel='mask-icon'
         />
         <meta
@@ -46,7 +46,7 @@ export default function Document() {
           media='(prefers-color-scheme: dark)'
         />{' '}
         <meta
-          content='/static/favicons/browserconfig.xml'
+          content='/favicons/browserconfig.xml'
           name='msapplication-config'
         />
         <meta

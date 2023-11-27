@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 import BlogPostList from '@components/BlogPostList'
 import Container from '@components/Container'
-import LatestProjects from '@components/LatestProjects'
 import Box from '@components/Work/Ui/Box'
 import Layout from '@components/Work/Ui/Layout'
 import Section from '@components/Work/Ui/Section'

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Menu from '@components/Menu'
 import { Transition } from '@headlessui/react'
 import splitbee from '@splitbee/web'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -112,7 +111,7 @@ export default function Container({
           <Link href='/' className='relative h-12 w-12'>
 
             <Image
-              src='/static/images/bg_75.gif'
+              src='/images/logo.gif'
               alt='logo'
               className='absolute inset-0 object-cover rounded-full'
               fill
