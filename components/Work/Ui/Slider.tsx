@@ -54,7 +54,7 @@ export default function Slider({ slides, containerClassName }: SliderProps) {
           <motion.li
             key={idx}
             aria-label={`Jump to image #${idx + 1}`}
-            className={clsx('w-full shrink-0 transition duration-500', {
+            className={clsx('w-full shrink-0 transition duration-500 w-full flex items-center justify-center', {
               'scale-95 cursor-pointer opacity-50': active !== idx,
             })}
             onTap={() => {
@@ -69,7 +69,7 @@ export default function Slider({ slides, containerClassName }: SliderProps) {
               loading='lazy'
               draggable='false'
               className={clsx(
-                '!static aspect-video w-[40rem] rounded-xl bg-theme-surface object-cover',
+                '!static aspect-video w-[50rem] md:w-full md:h-[25rem] rounded-xl bg-theme-surface object-cover',
                 active === idx &&
                   'ring-1 ring-theme-outline ring-offset-2 ring-offset-workuiblack'
               )}
