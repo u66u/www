@@ -5,7 +5,7 @@ import splitbee from '@splitbee/web'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
-import Image from "next/image"
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -61,168 +61,166 @@ export default function Container({
   }
   splitbee.init()
 
-  return <>
-    <CommandMenu opened={isOpen} setOpened={setIsOpen} />
-    <div
-      className={cn(
-        writingNav ? ' bg-inherit' : '',
-        snippetNav
-          ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
-          : '',
+  return (
+    <>
+      <CommandMenu opened={isOpen} setOpened={setIsOpen} />
+      <div
+        className={cn(
+          writingNav ? ' bg-inherit' : '',
+          snippetNav
+            ? 'bg-gradient-to-r from-rose-400/30 via-fuchsia-500/30 to-indigo-500/30'
+            : '',
 
-        'text-primary',
-        'relative h-full min-h-screen w-full',
-        'flex flex-col',
-        'motion-reduce:transition-none motion-reduce:transform-none',
-        'md:pb-12'
-      )}
-    >
-      <Head>
-        <NextSeo {...meta} />
-        <meta name='robots' content='follow, index' />
-        <meta property='og:url' content={`${baseUrl}${router.asPath}`} />
-        <link rel='canonical' href={`${baseUrl}${router.asPath}`} />
-        <meta property='og:type' content={meta.type} />
-        <meta property='og:site_name' content='Max Sekletsov' />
-        <meta property='og:description' content={meta.description} />
-        <meta property='og:title' content={meta.title} />
-        <meta property='og:image' content={meta.image} />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='@cristicrtu' />
-        <meta name='twitter:title' content={meta.title} />
-        <meta name='twitter:description' content={meta.description} />
-        <meta name='twitter:image' content={meta.image} />
-        {meta.date && (
-          <meta property='article:published_time' content={meta.date} />
+          'text-primary',
+          'relative h-full min-h-screen w-full',
+          'flex flex-col',
+          'motion-reduce:transition-none motion-reduce:transform-none',
+          'md:pb-12'
         )}
-      </Head>
-
-      <Transition
-        as={React.Fragment}
-        show={showNav}
-        enter='transition duration-100 ease-in-out'
-        enterFrom='opacity-0 scale-90'
-        enterTo='opacity-100 scale-100'
-        leave='transition ease-in-out'
-        leaveFrom='opacity-100 scale-100'
-        leaveTo='opacity-0 scale-95'
       >
-        <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
-          <Link href='/' className='relative h-12 w-12'>
-
-            <Image
-              src='/images/logo.gif'
-              alt='logo'
-              className='absolute inset-0 object-cover rounded-full'
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }} />
-
-          </Link>
-          {snippetNav && (
-            <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
-              <Link href='/' className='hover:text-primary transition-all cursor-pointer'>
-                
-                  Index
-                
-              </Link>
-              <span>/</span>
-              <Link
-                href='/snippet'
-                className='hover:text-primary transition-all cursor-pointer'>
-                
-                  Snippets
-                
-              </Link>
-              <span>/</span>
-              <Link
-                href={`/snippet/${snippetNav}`}
-                className='hover:text-primary transition-all cursor-pointer'>
-                
-                  Content
-                
-              </Link>
-            </div>
+        <Head>
+          <NextSeo {...meta} />
+          <meta name='robots' content='follow, index' />
+          <meta property='og:url' content={`${baseUrl}${router.asPath}`} />
+          <link rel='canonical' href={`${baseUrl}${router.asPath}`} />
+          <meta property='og:type' content={meta.type} />
+          <meta property='og:site_name' content='Max Sekletsov' />
+          <meta property='og:description' content={meta.description} />
+          <meta property='og:title' content={meta.title} />
+          <meta property='og:image' content={meta.image} />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:site' content='@cristicrtu' />
+          <meta name='twitter:title' content={meta.title} />
+          <meta name='twitter:description' content={meta.description} />
+          <meta name='twitter:image' content={meta.image} />
+          {meta.date && (
+            <meta property='article:published_time' content={meta.date} />
           )}
-          {writingNav && (
-            <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
-              <Link href='/' className='hover:text-primary transition-all cursor-pointer'>
-                
-                  index
-                
-              </Link>
-              <span>/</span>
-              <Link
-                href='/writing'
-                className='hover:text-primary transition-all cursor-pointer'>
-                
-                  writing
-                
-              </Link>
-              <span>/</span>
-              <Link
-                href={`/writing/${writingNav}`}
-                className='hover:text-primary transition-all cursor-pointer'>
+        </Head>
 
-                {writingNav}
-
-              </Link>
-            </div>
-          )}
-          <button
-            className='button-primary-y text-3xl'
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            ⌘
-          </button>
-        </nav>
-      </Transition>
-      <LazyMotion features={domAnimation}>
-        <m.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
+        <Transition
+          as={React.Fragment}
+          show={showNav}
+          enter='transition duration-100 ease-in-out'
+          enterFrom='opacity-0 scale-90'
+          enterTo='opacity-100 scale-100'
+          leave='transition ease-in-out'
+          leaveFrom='opacity-100 scale-100'
+          leaveTo='opacity-0 scale-95'
         >
-          <main
-            className={cn(
-              'px-4 mt-20',
-              'max-w-4xl',
-              'mx-auto my-auto',
-              'flex flex-col justify-center gap-12',
-              snippetNav
-                ? 'shadow-2xl dark:shadow-gray-800/90 dark:bg-black dark:bg-opacity-70 pt-6 bg-primary max-w-5xl'
-                : '',
-              // 'divide-y divide-gray-300 dark:divide-gray-700',
-              'rounded-lg',
-              writingNav ? 'max-w-5xl' : ''
+          <nav className='sticky w-full z-[1] top-2 md:top-4 max-w-4xl px-4 py-2 gap-4 mx-auto flex justify-between items-center'>
+            <Link href='/' className='relative h-12 w-12'>
+              <Image
+                src='/images/logo.gif'
+                alt='logo'
+                className='absolute inset-0 object-cover rounded-full'
+                fill
+                sizes='100vw'
+                style={{
+                  objectFit: 'cover',
+                }}
+              />
+            </Link>
+            {snippetNav && (
+              <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
+                <Link
+                  href='/'
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  Index
+                </Link>
+                <span>/</span>
+                <Link
+                  href='/snippet'
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  Snippets
+                </Link>
+                <span>/</span>
+                <Link
+                  href={`/snippet/${snippetNav}`}
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  Content
+                </Link>
+              </div>
             )}
+            {writingNav && (
+              <div className='flex flex-row gap-1 text-tertiary bg-primary filter-blur p-3 rounded-full'>
+                <Link
+                  href='/'
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  index
+                </Link>
+                <span>/</span>
+                <Link
+                  href='/writing'
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  writing
+                </Link>
+                <span>/</span>
+                <Link
+                  href={`/writing/${writingNav}`}
+                  className='hover:text-primary transition-all cursor-pointer'
+                >
+                  {writingNav}
+                </Link>
+              </div>
+            )}
+            <button
+              className='button-primary-y text-3xl'
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              ⌘
+            </button>
+          </nav>
+        </Transition>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
           >
-            <div className='flex flex-col gap-2'>
-              {back && (
-                (<Link
-                  href={back.href}
-                  className={cn(
-                    'text-tertiary hover:text-secondary transition duration-200 ease-in-out cursor-pointer group mb-4'
-                  )}>
-
-                  <span
-                    aria-hidden='true'
-                    className='inline-block transition-transform duration-200 ease-in-out translate-x-0 group-hover:-translate-x-1'
-                  >
-                    ⇤
-                  </span>{' '}
-                  {back.label}
-
-                </Link>)
+            <main
+              className={cn(
+                'px-4 mt-20',
+                'max-w-4xl',
+                'mx-auto my-auto',
+                'flex flex-col justify-center gap-12',
+                snippetNav
+                  ? 'shadow-2xl dark:shadow-gray-800/90 dark:bg-black dark:bg-opacity-70 pt-6 bg-primary max-w-5xl'
+                  : '',
+                // 'divide-y divide-gray-300 dark:divide-gray-700',
+                'rounded-lg',
+                writingNav ? 'max-w-5xl' : ''
               )}
-              {children}
-            </div>
-            {footer && <Footer page={page} />}
-          </main>
-        </m.div>
-      </LazyMotion>
-    </div>
-  </>;
+            >
+              <div className='flex flex-col gap-2'>
+                {back && (
+                  <Link
+                    href={back.href}
+                    className={cn(
+                      'text-tertiary hover:text-secondary transition duration-200 ease-in-out cursor-pointer group mb-4'
+                    )}
+                  >
+                    <span
+                      aria-hidden='true'
+                      className='inline-block transition-transform duration-200 ease-in-out translate-x-0 group-hover:-translate-x-1'
+                    >
+                      ⇤
+                    </span>{' '}
+                    {back.label}
+                  </Link>
+                )}
+                {children}
+              </div>
+              {footer && <Footer page={page} />}
+            </main>
+          </m.div>
+        </LazyMotion>
+      </div>
+    </>
+  )
 }

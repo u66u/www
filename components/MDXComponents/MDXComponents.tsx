@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'
 import Link from 'next/link'
 
 import DownloadImage from '@components/DownloadImage'
@@ -13,7 +13,7 @@ const CustomLink = (props: any) => {
       <Link href={href} {...props}>
         {props.children}
       </Link>
-    );
+    )
   }
 
   return <a target='_blank' rel='noopener noreferrer' {...props} />

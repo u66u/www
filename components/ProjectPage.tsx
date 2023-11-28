@@ -38,7 +38,11 @@ const ProjectPage = ({ projects }: { projects: Project[] }) => {
             </button>
             {selectedProject === project._id && (
               <div className='flex'>
-                <img src={project.image} alt='Project image' className='w-1/4' />
+                <img
+                  src={project.image}
+                  alt='Project image'
+                  className='w-1/4'
+                />
                 <div className='ml-4'>
                   <h2>{project.title}</h2>
                   <p>{project.description}</p>
@@ -60,10 +64,9 @@ const ProjectPage = ({ projects }: { projects: Project[] }) => {
 export default ProjectPage
 
 export function getStaticProps() {
-  const projects = allProjects
-    .map(project =>
-      pick(project, ['_id', 'title', 'description', 'image', 'link'])
-    )
+  const projects = allProjects.map(project =>
+    pick(project, ['_id', 'title', 'description', 'image', 'link'])
+  )
 
   return {
     props: {

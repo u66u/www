@@ -16,10 +16,7 @@ export function SEO() {
           type='image/svg+xml'
           sizes='any'
         />
-        <link
-          rel='apple-touch-icon'
-          href='/favicons/apple-touch-icon.png'
-        />
+        <link rel='apple-touch-icon' href='/favicons/apple-touch-icon.png' />
         <link rel='manifest' href='/favicons/site.webmanifest' />
       </Head>
     </>

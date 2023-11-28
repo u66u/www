@@ -14,7 +14,7 @@ const notFound = () => {
         Home
       </Link>
     </Container>
-  );
+  )
 }
 
 export default notFound

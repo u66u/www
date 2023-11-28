@@ -10,7 +10,10 @@ import type { Writing } from 'contentlayer/generated'
 
 import { allWritings } from '.contentlayer/generated'
 
-const images = Array.from({ length: 6 }, (_, i) => `/images/blog-icons/${i + 1}.jpg`);
+const images = Array.from(
+  { length: 6 },
+  (_, i) => `/images/blog-icons/${i + 1}.jpg`
+)
 
 const WritingPage = ({ posts }: { posts: Writing[] }) => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
@@ -61,15 +64,15 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
         ))}
       </div>
       {filteredPosts?.map((post, index) => (
-        (<Link
+        <Link
           key={post.slug}
           href={`/writing/${post.slug}`}
           className={cn(
             'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
             'hover:bg-gray-200 dark:hover:bg-gray-800',
             'transition-all duration-200'
-          )}>
-
+          )}
+        >
           <img
             src={images[index % 6]}
             alt='Post image'
@@ -79,11 +82,10 @@ const WritingPage = ({ posts }: { posts: Writing[] }) => {
           <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
             {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
           </span>
-
-        </Link>)
+        </Link>
       ))}
     </Container>
-  );
+  )
 }
 
 export default WritingPage

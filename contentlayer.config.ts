@@ -106,7 +106,7 @@ const Project = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
     image: { type: 'string', required: true },
-    link:  { type: 'string', required: false },
+    link: { type: 'string', required: false },
   },
   computedFields,
 }))

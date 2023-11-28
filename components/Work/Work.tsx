@@ -1,10 +1,10 @@
-import Image from "next/image"
+import Image from 'next/image'
 
 import { ArrowUpRightIcon } from '@components/Work/Ui/ArrowUpRight'
 import Slider from '@components/Work/Ui/Slider'
 import { works } from '@components/Work/WorkInterface'
 
-export function Work(work: typeof works[number]) {
+export function Work(work: (typeof works)[number]) {
   return (
     <article>
       <header className='flex items-center gap-x-4'>
@@ -21,9 +21,10 @@ export function Work(work: typeof works[number]) {
             height={48}
             className='h-full w-full rounded-lg'
             style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
           <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black/50 opacity-0 transition-opacity group-hover:opacity-100'>
             <ArrowUpRightIcon width={24} height={24} className='text-white' />
           </div>
@@ -52,5 +53,5 @@ export function Work(work: typeof works[number]) {
         {work.slides && <Slider slides={work.slides} />}
       </div>
     </article>
-  );
+  )
 }

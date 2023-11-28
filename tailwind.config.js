@@ -21,7 +21,7 @@ module.exports = {
       spacing: {
         128: '32rem',
       },
-      
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
       },
@@ -41,7 +41,7 @@ module.exports = {
         current: 'currentColor',
         transparent: 'transparent',
         workuiblack: 'hsl(0, 0%, 8%)',
-        gray4: '#9C9C9C'
+        gray4: '#9C9C9C',
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],

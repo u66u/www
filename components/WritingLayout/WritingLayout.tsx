@@ -54,33 +54,32 @@ export default function WritingLayout({ post, children }: IWritingLayoutProps) {
           )}
           <Suspense fallback={null}>
             <div className='pt-3 top-0 md:hidden block'>
-          <TOC
-            toc={post.toc}
-            _id={''}
-            _raw={{
-              sourceFilePath: '',
-              sourceFileName: '',
-              sourceFileDir: '',
-              contentType: 'data',
-              flattenedPath: '',
-            }}
-            type={'Writing'}
-            title={''}
-            publishedAt={''}
-            summary={''}
-            image={''}
-            category={''}
-            body={{
-              raw: '',
-              code: '',
-            }}
-            readingTime={undefined}
-            wordCount={0}
-            slug={''}
-          />
-        </div>
+              <TOC
+                toc={post.toc}
+                _id={''}
+                _raw={{
+                  sourceFilePath: '',
+                  sourceFileName: '',
+                  sourceFileDir: '',
+                  contentType: 'data',
+                  flattenedPath: '',
+                }}
+                type={'Writing'}
+                title={''}
+                publishedAt={''}
+                summary={''}
+                image={''}
+                category={''}
+                body={{
+                  raw: '',
+                  code: '',
+                }}
+                readingTime={undefined}
+                wordCount={0}
+                slug={''}
+              />
+            </div>
             <div className='w-full my-4 prose dark:prose-dark max-w-5xl'>
-              
               {children}
             </div>
           </Suspense>

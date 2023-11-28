@@ -69,15 +69,15 @@ const SnippetPage = ({ posts }: { posts: Snippet[] }) => {
         ))}
       </div>
       {filteredPosts?.map(post => (
-        (<Link
+        <Link
           key={post.slug}
           href={`/snippet/${post.slug}`}
           className={cn(
             'flex flex-row justify-between py-2 px-2 -mx-2 rounded-md',
             'hover:bg-gray-200 dark:hover:bg-gray-800',
             'transition-all duration-200'
-          )}>
-
+          )}
+        >
           <svg
             className='text-quaternary w-6 h-auto object-cover object-center ml-2'
             viewBox='0 0 25 25'
@@ -104,11 +104,10 @@ const SnippetPage = ({ posts }: { posts: Snippet[] }) => {
               />
             </svg>
           </span>
-
-        </Link>)
+        </Link>
       ))}
     </Container>
-  );
+  )
 }
 
 export default SnippetPage
