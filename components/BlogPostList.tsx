@@ -1,28 +1,30 @@
 import { pick } from 'contentlayer/client'
 import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
-
 import { cn } from '@lib/classNames'
 import type { Writing } from 'contentlayer/generated'
 
 import { allWritings } from '.contentlayer/generated'
 
-// blog post icons
-const images = Array.from({ length: 6 }, (_, i) => `/images/blog-icons/${i + 1}.jpg`);
+// blog post gradient icons
+const images = Array.from(
+  { length: 6 },
+  (_, i) => `/images/blog-icons/${i + 1}.jpg`
+)
 
 const BlogPostList = ({ posts }: { posts: Writing[] }) => {
   return (
     <div>
       {posts?.slice(0, 5).map((post, index) => (
-        (<Link
+        <Link
           key={post.slug}
           href={`/writing/${post.slug}`}
           className={cn(
             'flex flex-row justify-between py-2.5 px-2 -mx-2 rounded-md border-gray-200 dark:border-gray-800',
             'hover:bg-gray-200 dark:hover:bg-gray-800',
             'transition-all duration-200'
-          )}>
-
+          )}
+        >
           <img
             src={images[index % 6]}
             alt='Post image'
@@ -32,8 +34,7 @@ const BlogPostList = ({ posts }: { posts: Writing[] }) => {
           <span className='text-tertiary flex-shrink-0 hidden lg:block md:block'>
             {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
           </span>
-
-        </Link>)
+        </Link>
       ))}
       <br></br>
       <Link href='/writing' legacyBehavior>
@@ -44,7 +45,7 @@ const BlogPostList = ({ posts }: { posts: Writing[] }) => {
         </button>
       </Link>
     </div>
-  );
+  )
 }
 
 export default BlogPostList
