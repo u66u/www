@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
   )
 }
 
-const Projects = () => {
+const ProjectsMapped = () => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const cards = Array.from(document.getElementsByClassName('card'))
@@ -101,4 +101,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default ProjectsMapped

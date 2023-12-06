@@ -12,6 +12,7 @@ import { Work } from '@components/Work/Work'
 import { works } from '@components/Work/WorkInterface'
 import type { Writing } from 'contentlayer/generated'
 import { allWritings } from '.contentlayer/generated'
+import Projects from '@components/Projects/Projects'
 
 const Home = ({ posts }: { posts: Writing[] }) => {
   return (
@@ -40,7 +41,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                         rel='noreferrer'
                         target='_blank'
                       >
-                        Seleri Agency {'-->'}
+                        Seleri Agency
                       </a>{' '}
                       and{' '}
                       <a
@@ -49,7 +50,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                         rel='noreferrer'
                         target='_blank'
                       >
-                        Venera Bio {'-->'}
+                        Venera Bio
                       </a>
                     </p>
                     <br />{' '}
@@ -71,6 +72,7 @@ const Home = ({ posts }: { posts: Writing[] }) => {
               <h3 className='font-semibold text-xl'>Recent posts</h3>
               <Suspense fallback={null}>
                 <BlogPostList posts={posts} />
+                <Projects />
                 <h2 className='mt-2 text-xl font-semibold '>Work</h2>
                 <Box className='overflow-hidden'>
                   <Section>
@@ -81,10 +83,17 @@ const Home = ({ posts }: { posts: Writing[] }) => {
                     </div>
                   </Section>
                 </Box>
-                <Link href='/projects' legacyBehavior>
+                <Link href='/work' legacyBehavior>
                   <button className='relative w-full inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400'>
                     <span className='relative w-full px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                       See all work
+                    </span>
+                  </button>
+                </Link>
+                <Link href='/projects' legacyBehavior>
+                  <button className='relative w-full inline-flex items-center justify-center p-10 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400'>
+                    <span className='relative w-full px-5 py-2 transition-all ease-in duration-75 text-lg rounded-md group-hover:bg-opacity-0'>
+                      Projects {'-->'}
                     </span>
                   </button>
                 </Link>

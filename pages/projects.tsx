@@ -1,23 +1,22 @@
-import Container from '@components/Container'
-import { Work } from '@components/Work/Work'
-import { works } from '@components/Work/WorkInterface'
-
-import Layout from '@components/Layout'
-import Box from '@components/Work/Ui/Box'
+import Projects from '@components/Projects/Projects'
+import Layout from '@components/Work/Ui/Layout'
 import Section from '@components/Work/Ui/Section'
+import Container from '@components/Container'
+import Box from '@components/Work/Ui/Box'
 
-const Tools = () => {
+const ProjectPage = () => {
   return (
     <Layout>
-      <Container page={'index'}>
+      <Container
+        back={{
+          href: '/',
+          label: 'Index',
+        }}
+      >
         <Box className='overflow-hidden'>
           <Section>
-            <h2 className='text-xl font-medium text-theme-heading'>Work</h2>
-            <div className='mt-6 flex flex-col gap-y-16'>
-              {works.map((work, idx) => (
-                <Work {...work} key={idx} />
-              ))}
-            </div>
+            <h2 className='mt-2 text-xl font-semibold mb-4'>Projects</h2>
+            <Projects />
           </Section>
         </Box>
       </Container>
@@ -25,4 +24,4 @@ const Tools = () => {
   )
 }
 
-export default Tools
+export default ProjectPage
