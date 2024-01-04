@@ -1,18 +1,19 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { Work } from '../Work/Work'
-import { works } from '../Work/WorkInterface'
 import { AllProjects } from './ProjectInterface'
 
-const Projects = () => {
+interface ProjectsProps {
+  limit?: number;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ limit = AllProjects.length }) => {
   return (
     <>
       <div className='grid grid-cols-1 gap-3 mb-3'>
-        {AllProjects.map(work => (
+        {AllProjects.slice(0, limit).map(work => (
           <Link
-            href={`/projects/${work.link}`}
+            href={work.link}
             key={work.title}
-            className='flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 dark:bg-transparent dark:border-2 dark:hover:bg-gray-800 border border-transparent hover:bg-gray-200 py-3 rounded-lg transition-all duration-200'
+            className='flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 dark:bg-transparent dark:border-2 dark:hover:bg-gray-800 border border-transparent hover:bg-gray-200 px-2 py-3 rounded-lg transition-all duration-200'
           >
             <img
               src={work.logo}

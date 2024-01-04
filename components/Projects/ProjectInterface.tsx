@@ -27,4 +27,25 @@ export const AllProjects: Projects[] = [
     description:
       'The fastest and the most cost effective way of investing in crypto.',
   },
+  {
+    link: 'https://vocoapp.com',
+    logo: '/images/works/voco/logo.png',
+    title: 'Voco Inc.',
+    description:
+      'A mobile platform where users can freely showcase their creativity in organizing events.',
+  },
+  {
+    link: 'https://vocoapp.com',
+    logo: '/images/works/voco/logo.png',
+    title: 'Voco Inc.',
+    description:
+      'A mobile platform where users can freely showcase their creativity in organizing events.',
+  },
+  {
+    link: 'https://vocoapp.com',
+    logo: '/images/works/voco/logo.png',
+    title: 'Voco Inc.',
+    description:
+      'A mobile platform where users can freely showcase their creativity in organizing events.',
+  },
 ]

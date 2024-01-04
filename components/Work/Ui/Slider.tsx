@@ -55,7 +55,7 @@ export default function Slider({ slides, containerClassName }: SliderProps) {
             key={idx}
             aria-label={`Jump to image #${idx + 1}`}
             className={clsx(
-              'w-full shrink-0 transition duration-500 w-full flex items-center justify-center',
+              'shrink-0 transition duration-500 w-full flex items-center justify-center',
               {
                 'scale-95 cursor-pointer opacity-50': active !== idx,
               }

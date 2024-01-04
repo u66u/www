@@ -1,13 +1,12 @@
 import Container from '@components/Container'
 import { Work } from '@components/Work/Work'
 import { works } from '@components/Work/WorkInterface'
-
 import Layout from '@components/Layout'
 import Box from '@components/Work/Ui/Box'
 import Section from '@components/Work/Ui/Section'
 import Link from 'next/link'
 
-const Tools = () => {
+const WorkPage = () => {
   return (
     <Layout>
        <Container back={{
@@ -29,4 +28,4 @@ const Tools = () => {
   )
 }
 
-export default Tools
+export default WorkPage

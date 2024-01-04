@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { ArrowUpRightIcon } from '@components/Work/Ui/ArrowUpRight'
 import Slider from '@components/Work/Ui/Slider'
 import { works } from '@components/Work/WorkInterface'
