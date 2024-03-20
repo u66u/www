@@ -7,45 +7,31 @@ interface Projects {
 
 export const AllProjects: Projects[] = [
   {
-    link: 'https://vocoapp.com',
-    logo: '/images/works/voco/logo.png',
-    title: 'Voco Inc.',
+    link: 'https://github.com/u66u/axum-elm-portfolio',
+    logo: '/images/projects/elm.png',
+    title: 'axum-elm-portfolio',
     description:
-      'A mobile platform where users can freely showcase their creativity in organizing events.',
+      'Elm for frontend, Axum for backend CRUD app with blog.',
   },
   {
-    link: 'https://eren.si/en',
-    logo: '/images/works/erensibot/logo.png',
-    title: 'ErensiBot',
+    link: 'https://github.com/u66u/lotus',
+    logo: '/images/projects/lotus.jpg',
+    title: 'Lotus',
     description:
-      'A Discord bot that is trusted by half a million Discord servers to manage their community.',
+      'A machine learning framework for simple neural networks with optimal defaults.',
   },
   {
-    link: 'https://playpad.app',
-    logo: '/images/works/playpad/logo.png',
-    title: 'PlayPad',
+    link: 'https://github.com/u66u/homeomorphism',
+    logo: '/images/projects/homeo.png',
+    title: 'Homeomorphism.cpp',
     description:
-      'The fastest and the most cost effective way of investing in crypto.',
+      ' A simple library/app to check if topological spaces are homeomorphic.',
   },
   {
-    link: 'https://vocoapp.com',
-    logo: '/images/works/voco/logo.png',
-    title: 'Voco Inc.',
+    link: 'https://github.com/u66u/ch8',
+    logo: '/images/projects/chip8.png',
+    title: 'CH8',
     description:
-      'A mobile platform where users can freely showcase their creativity in organizing events.',
-  },
-  {
-    link: 'https://vocoapp.com',
-    logo: '/images/works/voco/logo.png',
-    title: 'Voco Inc.',
-    description:
-      'A mobile platform where users can freely showcase their creativity in organizing events.',
-  },
-  {
-    link: 'https://vocoapp.com',
-    logo: '/images/works/voco/logo.png',
-    title: 'Voco Inc.',
-    description:
-      'A mobile platform where users can freely showcase their creativity in organizing events.',
+      ' chip-8 interpreter',
   },
 ]
